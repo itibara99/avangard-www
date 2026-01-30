@@ -590,7 +590,7 @@ function AvangardPage() {
               
               <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
                   
-                <span className="text-sky-400 font-semibold"> Качественно. Надежно. Экологично.</span>
+                <span className="text-sky-400 font-semibold"> Качественно. Надежно. </span>
               </p>
             </div>
 
