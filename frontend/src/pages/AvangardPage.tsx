@@ -24,51 +24,50 @@ import {
   CheckCircle,
 } from 'lucide-react';
 import AboutSection from '../components/avangard/AboutSection.tsx';
-import { ceilingSlide } from '../assets/images';
-
-// Temporary: using ceilingSlide as placeholder for missing images
-const obshestroy = ceilingSlide;
-const konvektory = ceilingSlide;
-const konstrukt = ceilingSlide;
-const gryaz = ceilingSlide;
-const lameli = ceilingSlide;
-const chert = ceilingSlide;
-const logo1 = ceilingSlide;
-const dekor = ceilingSlide;
-const oknadveri = ceilingSlide;
-const vent = ceilingSlide;
-const sun = ceilingSlide;
-const dorogi = ceilingSlide;
-const santeh = ceilingSlide;
-const fasad = ceilingSlide;
-const ventfasad = ceilingSlide;
-const lodki = ceilingSlide;
-const pool = ceilingSlide;
-const pergol = ceilingSlide;
-const lestnici = ceilingSlide;
-const dush = ceilingSlide;
-const lift = ceilingSlide;
-const porogi = ceilingSlide;
-const auto = ceilingSlide;
-const borti = ceilingSlide;
-const shkafi = ceilingSlide;
-const teplici = ceilingSlide;
-const electro = ceilingSlide;
-const radiator = ceilingSlide;
-const moskit = ceilingSlide;
-const zhaluzi = ceilingSlide;
+import potolkiBg from '../assets/potolki1.jpg';
+import potolkiProfile from '../assets/potolki1.jpg';
+import obshestroy from '../assets/obshestroy.jpg';
+import konvektory from '../assets/konvektory.jpg';
+import konstrukt from '../assets/konstrukt.jpg';
+import gryaz from '../assets/gryaz.jpg';
+import lameli from '../assets/lameli.jpg';
+import chert from '../assets/chert.jpg';
+import logo1 from '../assets/logo1.png';
+import dekor from '../assets/dekor.jpg';
+import oknadveri from '../assets/oknadveri.jpg';
+import vent from '../assets/vent.jpg';
+import sun from '../assets/sun.jpg';
+import dorogi from '../assets/dorogi.jpg';
+import santeh from '../assets/santeh.jpg';
+import fasad from '../assets/fasad.jpg';
+import ventfasad from '../assets/ventfasad.jpg';
+import lodki from '../assets/lodki.jpg';
+import pool from '../assets/pool.jpg';
+import pergol from '../assets/pergol.jpg';
+import lestnici from '../assets/lestnici.jpg';
+import dush from '../assets/dush.jpg';
+import lift from '../assets/lift.jpg';
+import porogi from '../assets/borti.jpg';
+import auto from '../assets/auto.jpg';
+import borti from '../assets/borti.jpg';
+import shkafi from '../assets/shkafi.jpg';
+import teplici from '../assets/teplici.jpg';
+import electro from '../assets/electro.jpg';
+import radiator from '../assets/radiator.jpg';
+import moskit from '../assets/moskit.jpg';
+import zhaluzi from '../assets/zhaluzi.jpg';
 
 import {YMaps, Map, Placemark} from '@pbe/react-yandex-maps';
 
 // Импорты изображений для каталога (замените на фактические пути к вашим изображениям)
 const catalogImages = {
   chert: chert, // Замените на фактический путь
-  potolki: ceilingSlide, // Используем существующее изображение как пример
+  potolki: potolkiProfile, // Используем существующее изображение как пример
   obschestroitelny: obshestroy,
   konvektory: konvektory,
   dekorativny: dekor, // Замените на фактический путь
   konstrukcionny: konstrukt,
-  reklamny: ceilingSlide, // Замените на фактический путь
+  reklamny: potolkiProfile, // Замените на фактический путь
   gryazezaschitny: gryaz, // Замените на фактический путь
   lameli: lameli, // Замените на фактический путь
   ventFasady: ventfasad, // Замените на фактический путь
@@ -658,10 +657,10 @@ function AvangardPage() {
           
           <div className="relative overflow-hidden rounded-3xl bg-black backdrop-blur-sm border border-cyan-500/30 min-h-[400px] flex items-center">
             {/* Background Image Overlay */}
-            <div
+            <div 
               className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
               style={{
-                backgroundImage: `url(${ceilingSlide})`
+                backgroundImage: `url(${potolkiBg})`
               }}
             ></div>
             

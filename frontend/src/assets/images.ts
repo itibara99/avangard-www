@@ -1,32 +1,30 @@
-// Placeholder image data URI (1x1 transparent pixel)
-const placeholder = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="800" height="600"%3E%3Crect width="800" height="600" fill="%23374151"/%3E%3Ctext x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" font-family="Arial" font-size="24" fill="%23fff"%3EImage Placeholder%3C/text%3E%3C/svg%3E';
+import logo from './logo.png';
+import bp40 from './bp40.jpg';
+import bp40_ch from './ch/bp40 ch.jpg';
+import stenvoy from './stenovoy.jpg';
+import sten_1 from './ch/sten 1 ch.jpg';
+import sten_2 from './ch/sten 2 ch.jpg';
+import sten_3 from './ch/sten 3 ch.jpg';
+import razdelitel from './razdelitel.jpg';
+import razdelitel_ch from './ch/razdelitel ch.jpg';
+import universal from './universal.jpg';
+import universal_ch from './ch/univers ch.jpg';
+import potoloch from './potoloch.jpg';
+import potoloch_ch from './ch/potoloch ch.jpg'
+import z from './z.jpg';
+import z_ch from './ch/z ch.jpg';
+import b2 from './b2.jpg';
+import pk14_ch from './ch/pk14 ch.jpg';
+import cornices from './cornices.jpg';
+import pk15 from './pk15.jpg';
+import pk15_ch from './ch/pk15 ch.jpg';
+import pk12 from './pk12.jpg';
+import pk12_ch from './ch/pk12 ch.jpg';
+import am1 from './AM1.jpg';
+import furnitures from './furnitures.jpg';
+import light_lines from './light-lines.jpg';
+import ceilingSlide from './ceiling.jpg'
 
-const logo = placeholder;
-const bp40 = placeholder;
-const bp40_ch = placeholder;
-const stenvoy = placeholder;
-const sten_1 = placeholder;
-const sten_2 = placeholder;
-const sten_3 = placeholder;
-const razdelitel = placeholder;
-const razdelitel_ch = placeholder;
-const universal = placeholder;
-const universal_ch = placeholder;
-const potoloch = placeholder;
-const potoloch_ch = placeholder;
-const z = placeholder;
-const z_ch = placeholder;
-const b2 = placeholder;
-const pk14_ch = placeholder;
-const cornices = placeholder;
-const pk15 = placeholder;
-const pk15_ch = placeholder;
-const pk12 = placeholder;
-const pk12_ch = placeholder;
-const am1 = placeholder;
-const furnitures = placeholder;
-const light_lines = placeholder;
-const ceilingSlide = placeholder;
 
 export {
     bp40, bp40_ch, stenvoy, sten_1, sten_2, sten_3, razdelitel,
