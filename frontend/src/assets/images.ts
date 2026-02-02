@@ -1,30 +1,29 @@
-import logo from './logo.png';
-import bp40 from './bp40.jpg';
-import bp40_ch from './ch/bp40 ch.jpg';
-import stenvoy from './stenovoy.jpg';
-import sten_1 from './ch/sten 1 ch.jpg';
-import sten_2 from './ch/sten 2 ch.jpg';
-import sten_3 from './ch/sten 3 ch.jpg';
-import razdelitel from './razdelitel.jpg';
-import razdelitel_ch from './ch/razdelitel ch.jpg';
-import universal from './universal.jpg';
-import universal_ch from './ch/univers ch.jpg';
-import potoloch from './potoloch.jpg';
-import potoloch_ch from './ch/potoloch ch.jpg'
-import z from './z.jpg';
-import z_ch from './ch/z ch.jpg';
-import b2 from './b2.jpg';
-import pk14_ch from './ch/pk14 ch.jpg';
-import cornices from './cornices.jpg';
-import pk15 from './pk15.jpg';
-import pk15_ch from './ch/pk15 ch.jpg';
-import pk12 from './pk12.jpg';
-import pk12_ch from './ch/pk12 ch.jpg';
-import am1 from './AM1.jpg';
-import furnitures from './furnitures.jpg';
-import light_lines from './light-lines.jpg';
-import ceilingSlide from './ceiling.jpg'
-
+const logo = '/assets/logo-SHRe-G6M.png';
+const bp40 = '/assets/bp40-OJync2AQ.jpg';
+const bp40_ch = '/assets/bp40 ch-VjNNeExM.jpg';
+const stenvoy = '/assets/stenovoy-JR2baCTF.jpg';
+const sten_1 = '/assets/sten 1 ch-CEBZDSMW.jpg';
+const sten_2 = '/assets/sten 2 ch-B2Ha_FBq.jpg';
+const sten_3 = '/assets/sten 3 ch-B00i3CPb.jpg';
+const razdelitel = '/assets/razdelitel-9_MLrvVA.jpg';
+const razdelitel_ch = '/assets/razdelitel ch-BEyP-_0d.jpg';
+const universal = '/assets/universal-CCPXzns4.jpg';
+const universal_ch = '/assets/univers ch-CFZ0JjN_.jpg';
+const potoloch = '/assets/potoloch-BXSeolw_.jpg';
+const potoloch_ch = '/assets/potoloch ch-9Gy1lg_H.jpg';
+const z = '/assets/z-BlnkgLq2.jpg';
+const z_ch = '/assets/z ch-BfApx_ka.jpg';
+const b2 = '/assets/b2-C4kg7KUA.jpg';
+const pk14_ch = '/assets/pk14 ch-9Qbl8vAf.jpg';
+const cornices = '/assets/cornices-BCZMq3Iu.jpg';
+const pk15 = '/assets/pk15-DEA0C84Y.jpg';
+const pk15_ch = '/assets/pk15 ch-DgC_cER2.jpg';
+const pk12 = '/assets/pk12-vDd9ZqzL.jpg';
+const pk12_ch = '/assets/pk12 ch-BVQhP2TD.jpg';
+const am1 = '/assets/AM1-D9dwSWsS.jpg';
+const furnitures = '/assets/furnitures-Nq8ndB3l.jpg';
+const light_lines = '/assets/light-lines-Df2PJJ6G.jpg';
+const ceilingSlide = '/assets/ceiling-BSRJwiq_.jpg';
 
 export {
     bp40, bp40_ch, stenvoy, sten_1, sten_2, sten_3, razdelitel,

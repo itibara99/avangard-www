@@ -19,13 +19,13 @@ export const useYandexMetrica = () => {
   const trackPageView = (url: string) => {
     if (typeof window !== 'undefined' && window.ym) {
       try {
-        window.ym(YANDEX_METRICA_ID, 'hit', url, {
-          referer: document.referrer,
-        });
+        window.ym(YANDEX_METRICA_ID, 'hit', url);
         console.log(`[Yandex Metrica] Page view tracked: ${url}`);
       } catch (error) {
         console.error('[Yandex Metrica] Error tracking page view:', error);
       }
+    } else {
+      console.warn('[Yandex Metrica] Script not loaded yet');
     }
   };
 
