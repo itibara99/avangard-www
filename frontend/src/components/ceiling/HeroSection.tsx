@@ -11,7 +11,7 @@ const HeroSection: React.FC = () => {
       subtitle: "Алюминиевые профили",
       description: "Высококачественные карнизы, багеты, стеновые, комплектующие и т.д.",
       image: ceilingSlide,
-      video: "https://xbawwaakkvciyofymepf.supabase.co/storage/v1/object/public/slider-video/Hailuo_Video_Wide%20shot%20modern%20loft%20(exposed_396833602164224002.mp4",
+      video: "",
     },
     {
       title: "ВЕСЬ ПРОФИЛЬ",
