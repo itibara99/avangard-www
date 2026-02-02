@@ -19,7 +19,7 @@ const HeroSection: React.FC = () => {
       description: "",
       // image: тут ссылка на изображение,
       href: "/",
-      video: "https://xbawwaakkvciyofymepf.supabase.co/storage/v1/object/public/slider-video/Extrude.mp"
+      video: "https://xbawwaakkvciyofymepf.supabase.co/storage/v1/object/public/slider-video/Extrude.mp4"
     },
     // {
     //   title: "Оптовое производство",
@@ -102,7 +102,7 @@ const HeroSection: React.FC = () => {
                     scrollToCatalog}
                 className="bg-yellow-400 hover:bg-yellow-500 text-black px-8 py-3 rounded-lg font-semibold transition-all duration-200 hover:scale-105 hover:shadow-lg flex items-center space-x-2 group"
               >
-                <span>Посмотреть примеры</span>
+                <span>Перейти</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
             </div>
