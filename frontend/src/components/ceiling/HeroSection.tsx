@@ -19,7 +19,7 @@ const HeroSection: React.FC = () => {
       description: "",
       // image: тут ссылка на изображение,
       href: "/",
-      video: "https://xbawwaakkvciyofymepf.supabase.co/storage/v1/object/public/slider-video/Extrude.mp4"
+      video: "https://xbawwaakkvciyofymepf.supabase.co/storage/v1/object/public/slider-video/Extrude.mp"
     },
     // {
     //   title: "Оптовое производство",
