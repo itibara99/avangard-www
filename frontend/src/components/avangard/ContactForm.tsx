@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { Phone, Mail, MapPin, Send, CheckCircle, AlertCircle, Loader2 } from 'lucide-react';
 import axios from 'axios';
+import { useYandexMetrica } from '../../hooks/useYandexMetrica';
 
 const ContactForm: React.FC = () => {
+  const { trackGoal } = useYandexMetrica();
   const [formData, setFormData] = useState<ContactFormData>({
     name: '',
     phone: '',
@@ -42,23 +44,20 @@ const ContactForm: React.FC = () => {
     try {
       console.log('Calling submitContactForm with data:', formData);
       await axios.post("/new_contact", formData);
-      
-      console.log('submitContactForm returned:', result);
-      
-      if (result.success) {
-        console.log('Form submission successful!');
-        setSubmitStatus('success');
-        setFormData({ name: '', phone: '', comment: '' });
-        
-        // Автоматически скрыть сообщение об успехе через 5 секунд
-        setTimeout(() => {
-          setSubmitStatus('idle');
-        }, 5000);
-      } else {
-        console.log('Form submission failed:', result.error);
-        setSubmitStatus('error');
-        setErrorMessage(result.error || 'Произошла ошибка при отправке формы');
-      }
+
+      console.log('Form submission successful!');
+      setSubmitStatus('success');
+      setFormData({ name: '', phone: '', comment: '' });
+
+      trackGoal('contact_form_avangard', {
+        page: 'avangard',
+        name: formData.name,
+      });
+
+      // Автоматически скрыть сообщение об успехе через 5 секунд
+      setTimeout(() => {
+        setSubmitStatus('idle');
+      }, 5000);
     } catch (error) {
       console.error('Unexpected error during form submission:', error);
       setSubmitStatus('error');

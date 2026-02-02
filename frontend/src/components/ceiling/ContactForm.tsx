@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { Send, User, Phone, MessageSquare } from 'lucide-react';
 import axios from 'axios';
+import { useYandexMetrica } from '../../hooks/useYandexMetrica';
 
 const ContactForm: React.FC = () => {
+  const { trackGoal } = useYandexMetrica();
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -36,10 +38,15 @@ const ContactForm: React.FC = () => {
       await axios.post(
           "/new_contact_roof",
           contactData);
-      
+
       setIsSubmitting(false);
       setIsSubmitted(true);
-      
+
+      trackGoal('contact_form_ceiling', {
+        page: 'ceiling',
+        name: formData.name,
+      });
+
       // Reset form after 3 seconds
       setTimeout(() => {
         setIsSubmitted(false);
