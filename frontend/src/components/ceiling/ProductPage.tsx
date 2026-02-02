@@ -352,8 +352,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderCli
         name: 'TL-вставка для карнизов',
         images: [
           furnitures,
-          'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=400',
-          'https://images.pexels.com/photos/1648776/pexels-photo-1648776.jpeg?auto=compress&cs=tinysrgb&w=400'
+          ''
         ],
         price: '45 ₽/шт',
         description: 'TL-вставка для карнизов',
@@ -371,8 +370,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderCli
         name: 'Заглушки торцевые ПК-14',
         images: [
           furnitures,
-          'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=400',
-          'https://images.pexels.com/photos/1648776/pexels-photo-1648776.jpeg?auto=compress&cs=tinysrgb&w=400'
+          ''
         ],
         price: '45 ₽/шт',
         description: 'TL-вставка для карнизов',
@@ -390,8 +388,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderCli
         name: 'Заглушки торцевые B-1',
         images: [
           furnitures,
-          'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=400',
-          'https://images.pexels.com/photos/1648776/pexels-photo-1648776.jpeg?auto=compress&cs=tinysrgb&w=400'
+          ''
         ],
         price: '45 ₽/шт',
         description: 'TL-вставка для карнизов',
@@ -409,8 +406,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderCli
         name: 'Бандажная лента',
         images: [
           furnitures,
-          'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=400',
-          'https://images.pexels.com/photos/1648776/pexels-photo-1648776.jpeg?auto=compress&cs=tinysrgb&w=400'
+          ''
         ],
         price: '45 ₽/шт',
         description: 'TL-вставка для карнизов',
