@@ -10,7 +10,7 @@ const HeroSection: React.FC = () => {
       title: "ДЛЯ НАТЯЖНЫХ ПОТОЛКОВ",
       subtitle: "Алюминиевые профили",
       description: "Высококачественные карнизы, багеты, стеновые, комплектующие и т.д.",
-      image: "frontend/dist/assets/ceilinghero.jpg",
+      image: "frontend/dist/assets/ceiling-BSRJwiq_.jpg",
     },
     {
       title: "ВЕСЬ ПРОФИЛЬ",
