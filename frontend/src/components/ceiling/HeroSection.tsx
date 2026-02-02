@@ -12,6 +12,7 @@ const HeroSection: React.FC = () => {
       description: "Высококачественные карнизы, багеты, стеновые, комплектующие и т.д.",
       image: ceilingSlide,
       video: "",
+      duration: 6500,
     },
     {
       title: "ВЕСЬ ПРОФИЛЬ",
@@ -19,7 +20,8 @@ const HeroSection: React.FC = () => {
       description: "",
       // image: тут ссылка на изображение,
       href: "/",
-      video: "https://xbawwaakkvciyofymepf.supabase.co/storage/v1/object/public/slider-video/Extrude.mp4"
+      video: "https://xbawwaakkvciyofymepf.supabase.co/storage/v1/object/public/slider-video/Extrude.mp4",
+      duration: 37500,
     },
     // {
     //   title: "Оптовое производство",
@@ -36,11 +38,11 @@ const HeroSection: React.FC = () => {
   ];
 
   useEffect(() => {
-    const timer = setInterval(() => {
+    const timer = setTimeout(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 37200);
-    return () => clearInterval(timer);
-  }, []);
+    }, slides[currentSlide].duration);
+    return () => clearTimeout(timer);
+  }, [currentSlide]);
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);

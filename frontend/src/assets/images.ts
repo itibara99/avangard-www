@@ -1,34 +1,28 @@
-import logo from './logo.png';
-import bp40 from './bp40.jpg';
-import bp40_ch from './ch/bp40 ch.jpg';
-import stenvoy from './stenovoy.jpg';
-import sten_1 from './ch/sten 1 ch.jpg';
-import sten_2 from './ch/sten 2 ch.jpg';
-import sten_3 from './ch/sten 3 ch.jpg';
-import razdelitel from './razdelitel.jpg';
-import razdelitel_ch from './ch/razdelitel ch.jpg';
-import universal from './universal.jpg';
-import universal_ch from './ch/univers ch.jpg';
-import potoloch from './potoloch.jpg';
-import potoloch_ch from './ch/potoloch ch.jpg'
-import z from './z.jpg';
-import z_ch from './ch/z ch.jpg';
-import b2 from './b2.jpg';
-import pk14_ch from './ch/pk14 ch.jpg';
-import cornices from './cornices.jpg';
-import pk15 from './pk15.jpg';
-import pk15_ch from './ch/pk15 ch.jpg';
-import pk12 from './pk12.jpg';
-import pk12_ch from './ch/pk12 ch.jpg';
-import am1 from './AM1.jpg';
-import furnitures from './furnitures.jpg';
-import light_lines from './light-lines.jpg';
-import ceilingSlide from './ceiling.jpg'
+const placeholderImage = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAwIiBoZWlnaHQ9IjYwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iODAwIiBoZWlnaHQ9IjYwMCIgZmlsbD0iIzMzMyIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIyNHB4IiBmaWxsPSIjYWFhIj5JbWFnZSBQbGFjZWhvbGRlcjwvdGV4dD48L3N2Zz4=';
 
-
-export {
-    bp40, bp40_ch, stenvoy, sten_1, sten_2, sten_3, razdelitel,
-    razdelitel_ch, universal, universal_ch, potoloch, potoloch_ch,
-    z, z_ch, b2, pk14_ch, cornices, pk15, pk15_ch, pk12, pk12_ch,
-    am1, furnitures, logo, light_lines, ceilingSlide
-}
+export const logo = placeholderImage;
+export const bp40 = placeholderImage;
+export const bp40_ch = placeholderImage;
+export const stenvoy = placeholderImage;
+export const sten_1 = placeholderImage;
+export const sten_2 = placeholderImage;
+export const sten_3 = placeholderImage;
+export const razdelitel = placeholderImage;
+export const razdelitel_ch = placeholderImage;
+export const universal = placeholderImage;
+export const universal_ch = placeholderImage;
+export const potoloch = placeholderImage;
+export const potoloch_ch = placeholderImage;
+export const z = placeholderImage;
+export const z_ch = placeholderImage;
+export const b2 = placeholderImage;
+export const pk14_ch = placeholderImage;
+export const cornices = placeholderImage;
+export const pk15 = placeholderImage;
+export const pk15_ch = placeholderImage;
+export const pk12 = placeholderImage;
+export const pk12_ch = placeholderImage;
+export const am1 = placeholderImage;
+export const furnitures = placeholderImage;
+export const light_lines = placeholderImage;
+export const ceilingSlide = placeholderImage;
