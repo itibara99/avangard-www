@@ -2,7 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
 import {ceilingSlide} from "@/assets/images.ts";
 
-const HeroSection: React.FC = () => {
+interface HeroSectionProps {
+  slideDurations?: number[];
+}
+
+const HeroSection: React.FC<HeroSectionProps> = ({ slideDurations }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const slides = [
@@ -10,36 +14,43 @@ const HeroSection: React.FC = () => {
       title: "ДЛЯ НАТЯЖНЫХ ПОТОЛКОВ",
       subtitle: "Алюминиевые профили",
       description: "Высококачественные карнизы, багеты, стеновые, комплектующие и т.д.",
-      image: "frontend/dist/assets/ceiling-BSRJwiq_.jpg",
+      image: ceilingSlide,
+      video: "",
+      duration: 5000,
     },
     {
       title: "ВЕСЬ ПРОФИЛЬ",
       subtitle: "от ООО Авангард",
       description: "",
-      // image: тут ссылка на изображение,
       href: "/",
-      video: "https://xbawwaakkvciyofymepf.supabase.co/storage/v1/object/public/slider-video/Extrude.mp4"
+      video: "https://xbawwaakkvciyofymepf.supabase.co/storage/v1/object/public/slider-video/Extrude.mp4",
+      duration: 37200,
     },
     // {
     //   title: "Оптовое производство",
     //   subtitle: "Оптовые цены",
     //   description: "Чем больше покупаете, тем больше экономите",
-    //   video: "https://xbawwaakkvciyofymepf.supabase.co/storage/v1/object/public/slider-video/Hailuo_Video_CINEMATIC%20SHOT%20SEQUENCE__%201%20E_396470788518010889.mp4"
+    //   video: "https://xbawwaakkvciyofymepf.supabase.co/storage/v1/object/public/slider-video/Hailuo_Video_CINEMATIC%20SHOT%20SEQUENCE__%201%20E_396470788518010889.mp4",
+    //   duration: 5000,
     // },
     // {
     //   title: "Широкий ассортимент",
     //   subtitle: "Для любых задач",
     //   description: "Стандартные, световые, контурные и карнизные профили",
-    //   video: "https://xbawwaakkvciyofymepf.supabase.co/storage/v1/object/public/slider-video/Hailuo_Video_Wide%20shot%20modern%20loft%20(exposed_396833602164224002.mp4"
+    //   video: "https://xbawwaakkvciyofymepf.supabase.co/storage/v1/object/public/slider-video/Hailuo_Video_Wide%20shot%20modern%20loft%20(exposed_396833602164224002.mp4",
+    //   duration: 5000,
     // }
   ];
 
   useEffect(() => {
-    const timer = setInterval(() => {
+    const currentDuration = slideDurations?.[currentSlide] ?? slides[currentSlide].duration;
+
+    const timer = setTimeout(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 37200);
-    return () => clearInterval(timer);
-  }, []);
+    }, currentDuration);
+
+    return () => clearTimeout(timer);
+  }, [currentSlide, slideDurations, slides.length]);
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
