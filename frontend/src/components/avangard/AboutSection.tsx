@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Award, Users, Clock, TrendingUp, CheckCircle, ArrowRight, Zap, Shield, Star } from 'lucide-react';
 
-const AboutSection: React.FC = () => {
+interface AboutSectionProps {
+  advantagesDuration?: number;
+}
+
+const AboutSection: React.FC<AboutSectionProps> = ({ advantagesDuration = 4000 }) => {
   const [activeAdvantage, setActiveAdvantage] = useState(0);
   const [counters, setCounters] = useState({
     experience: 0,
@@ -73,9 +77,9 @@ const AboutSection: React.FC = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveAdvantage(prev => (prev + 1) % advantages.length);
-    }, 4000);
+    }, advantagesDuration);
     return () => clearInterval(interval);
-  }, []);
+  }, [advantagesDuration]);
 
   return (
     <section id="о-нас" className="py-12 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden">

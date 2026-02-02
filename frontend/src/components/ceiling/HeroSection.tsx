@@ -2,7 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
 import {ceilingSlide} from "@/assets/images.ts";
 
-const HeroSection: React.FC = () => {
+interface HeroSectionProps {
+  slideDuration?: number;
+}
+
+const HeroSection: React.FC<HeroSectionProps> = ({ slideDuration = 37200 }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const slides = [
@@ -38,9 +42,9 @@ const HeroSection: React.FC = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 37200);
+    }, slideDuration);
     return () => clearInterval(timer);
-  }, []);
+  }, [slideDuration, slides.length]);
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);

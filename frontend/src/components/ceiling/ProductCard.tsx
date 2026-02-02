@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { ShoppingCart, Star, ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface ProductCardProps {
@@ -11,6 +11,8 @@ interface ProductCardProps {
   inStock: boolean;
   onProductClick: (productId: string) => void;
   onOrderClick: () => void;
+  autoSlide?: boolean;
+  autoSlideDuration?: number;
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({
@@ -22,9 +24,21 @@ const ProductCard: React.FC<ProductCardProps> = ({
   rating,
   inStock,
   onProductClick,
-  onOrderClick
+  onOrderClick,
+  autoSlide = false,
+  autoSlideDuration = 3000
 }) => {
   const [currentImageIndex, setCurrentImageIndex] = React.useState(0);
+
+  useEffect(() => {
+    if (!autoSlide || images.length <= 1) return;
+
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % images.length);
+    }, autoSlideDuration);
+
+    return () => clearInterval(interval);
+  }, [autoSlide, autoSlideDuration, images.length]);
 
   const nextSlide = (e: React.MouseEvent) => {
     e.stopPropagation();
