@@ -24,40 +24,43 @@ import {
   CheckCircle,
 } from 'lucide-react';
 import AboutSection from '../components/avangard/AboutSection.tsx';
-import { ceilingSlide, logo } from '../assets/images';
+import {
+  ceilingSlide,
+  logo,
+  obshestroy,
+  konvektory,
+  konstrukt,
+  gryaz,
+  lameli,
+  chert,
+  dekor,
+  oknadveri,
+  vent,
+  sun,
+  dorogi,
+  santeh,
+  fasad,
+  ventfasad,
+  lodki,
+  pool,
+  pergol,
+  lestnici,
+  dush,
+  lift,
+  porogi,
+  auto,
+  borti,
+  shkafi,
+  teplici,
+  electro,
+  radiator,
+  moskit,
+  zhaluzi
+} from '../assets/images';
 
 const potolkiBg = ceilingSlide;
 const potolkiProfile = ceilingSlide;
-const obshestroy = ceilingSlide;
-const konvektory = ceilingSlide;
-const konstrukt = ceilingSlide;
-const gryaz = ceilingSlide;
-const lameli = ceilingSlide;
-const chert = ceilingSlide;
 const logo1 = logo;
-const dekor = ceilingSlide;
-const oknadveri = ceilingSlide;
-const vent = ceilingSlide;
-const sun = ceilingSlide;
-const dorogi = ceilingSlide;
-const santeh = ceilingSlide;
-const fasad = ceilingSlide;
-const ventfasad = ceilingSlide;
-const lodki = ceilingSlide;
-const pool = ceilingSlide;
-const pergol = ceilingSlide;
-const lestnici = ceilingSlide;
-const dush = ceilingSlide;
-const lift = ceilingSlide;
-const porogi = ceilingSlide;
-const auto = ceilingSlide;
-const borti = ceilingSlide;
-const shkafi = ceilingSlide;
-const teplici = ceilingSlide;
-const electro = ceilingSlide;
-const radiator = ceilingSlide;
-const moskit = ceilingSlide;
-const zhaluzi = ceilingSlide;
 
 import {YMaps, Map, Placemark} from '@pbe/react-yandex-maps';
 
