@@ -1,29 +1,30 @@
-const logo = 'https://via.placeholder.com/100x100/1e40af/ffffff?text=Logo';
-const bp40 = 'https://images.pexels.com/photos/1648776/pexels-photo-1648776.jpeg?auto=compress&cs=tinysrgb&w=400';
-const bp40_ch = 'https://images.pexels.com/photos/1648776/pexels-photo-1648776.jpeg?auto=compress&cs=tinysrgb&w=400';
-const stenvoy = 'https://images.pexels.com/photos/1648776/pexels-photo-1648776.jpeg?auto=compress&cs=tinysrgb&w=400';
-const sten_1 = 'https://images.pexels.com/photos/1648776/pexels-photo-1648776.jpeg?auto=compress&cs=tinysrgb&w=400';
-const sten_2 = 'https://images.pexels.com/photos/1648776/pexels-photo-1648776.jpeg?auto=compress&cs=tinysrgb&w=400';
-const sten_3 = 'https://images.pexels.com/photos/1648776/pexels-photo-1648776.jpeg?auto=compress&cs=tinysrgb&w=400';
-const razdelitel = 'https://images.pexels.com/photos/1648776/pexels-photo-1648776.jpeg?auto=compress&cs=tinysrgb&w=400';
-const razdelitel_ch = 'https://images.pexels.com/photos/1648776/pexels-photo-1648776.jpeg?auto=compress&cs=tinysrgb&w=400';
-const universal = 'https://images.pexels.com/photos/1648776/pexels-photo-1648776.jpeg?auto=compress&cs=tinysrgb&w=400';
-const universal_ch = 'https://images.pexels.com/photos/1648776/pexels-photo-1648776.jpeg?auto=compress&cs=tinysrgb&w=400';
-const potoloch = 'https://images.pexels.com/photos/1648776/pexels-photo-1648776.jpeg?auto=compress&cs=tinysrgb&w=400';
-const potoloch_ch = 'https://images.pexels.com/photos/1648776/pexels-photo-1648776.jpeg?auto=compress&cs=tinysrgb&w=400';
-const z = 'https://images.pexels.com/photos/1648776/pexels-photo-1648776.jpeg?auto=compress&cs=tinysrgb&w=400';
-const z_ch = 'https://images.pexels.com/photos/1648776/pexels-photo-1648776.jpeg?auto=compress&cs=tinysrgb&w=400';
-const b2 = 'https://images.pexels.com/photos/1648776/pexels-photo-1648776.jpeg?auto=compress&cs=tinysrgb&w=400';
-const pk14_ch = 'https://images.pexels.com/photos/1648776/pexels-photo-1648776.jpeg?auto=compress&cs=tinysrgb&w=400';
-const cornices = 'https://images.pexels.com/photos/1648776/pexels-photo-1648776.jpeg?auto=compress&cs=tinysrgb&w=400';
-const pk15 = 'https://images.pexels.com/photos/1648776/pexels-photo-1648776.jpeg?auto=compress&cs=tinysrgb&w=400';
-const pk15_ch = 'https://images.pexels.com/photos/1648776/pexels-photo-1648776.jpeg?auto=compress&cs=tinysrgb&w=400';
-const pk12 = 'https://images.pexels.com/photos/1648776/pexels-photo-1648776.jpeg?auto=compress&cs=tinysrgb&w=400';
-const pk12_ch = 'https://images.pexels.com/photos/1648776/pexels-photo-1648776.jpeg?auto=compress&cs=tinysrgb&w=400';
-const am1 = 'https://images.pexels.com/photos/1648776/pexels-photo-1648776.jpeg?auto=compress&cs=tinysrgb&w=400';
-const furnitures = 'https://images.pexels.com/photos/1648776/pexels-photo-1648776.jpeg?auto=compress&cs=tinysrgb&w=400';
-const light_lines = 'https://images.pexels.com/photos/1648776/pexels-photo-1648776.jpeg?auto=compress&cs=tinysrgb&w=400';
-const ceilingSlide = 'https://images.pexels.com/photos/7534555/pexels-photo-7534555.jpeg?auto=compress&cs=tinysrgb&w=800';
+import logo from './logo.png';
+import bp40 from './bp40.jpg';
+import bp40_ch from './ch/bp40 ch.jpg';
+import stenvoy from './stenovoy.jpg';
+import sten_1 from './ch/sten 1 ch.jpg';
+import sten_2 from './ch/sten 2 ch.jpg';
+import sten_3 from './ch/sten 3 ch.jpg';
+import razdelitel from './razdelitel.jpg';
+import razdelitel_ch from './ch/razdelitel ch.jpg';
+import universal from './universal.jpg';
+import universal_ch from './ch/univers ch.jpg';
+import potoloch from './potoloch.jpg';
+import potoloch_ch from './ch/potoloch ch.jpg'
+import z from './z.jpg';
+import z_ch from './ch/z ch.jpg';
+import b2 from './b2.jpg';
+import pk14_ch from './ch/pk14 ch.jpg';
+import cornices from './cornices.jpg';
+import pk15 from './pk15.jpg';
+import pk15_ch from './ch/pk15 ch.jpg';
+import pk12 from './pk12.jpg';
+import pk12_ch from './ch/pk12 ch.jpg';
+import am1 from './AM1.jpg';
+import furnitures from './furnitures.jpg';
+import light_lines from './light-lines.jpg';
+import ceilingSlide from './ceiling.jpg'
+
 
 export {
     bp40, bp40_ch, stenvoy, sten_1, sten_2, sten_3, razdelitel,

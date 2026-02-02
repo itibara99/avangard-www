@@ -46,17 +46,9 @@ interface ProductPageProps {
   productId: string;
   onBack: () => void;
   onOrderClick: () => void;
-  autoSlide?: boolean;
-  autoSlideDuration?: number;
 }
 
-const ProductPage: React.FC<ProductPageProps> = ({
-  productId,
-  onBack,
-  onOrderClick,
-  autoSlide = false,
-  autoSlideDuration = 3000
-}) => {
+const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderClick }) => {
   const [currentImageSlide, setCurrentImageSlide] = useState(0);
 
   // Mock product data - in real app this would come from API
@@ -437,16 +429,6 @@ const ProductPage: React.FC<ProductPageProps> = ({
   };
 
   const product = getProductData(productId);
-
-  useEffect(() => {
-    if (!autoSlide || product.images.length <= 1) return;
-
-    const interval = setInterval(() => {
-      setCurrentImageSlide((prev) => (prev + 1) % product.images.length);
-    }, autoSlideDuration);
-
-    return () => clearInterval(interval);
-  }, [autoSlide, autoSlideDuration, product.images.length]);
 
   const nextImageSlide = () => {
     setCurrentImageSlide((prev) => (prev + 1) % product.images.length);
