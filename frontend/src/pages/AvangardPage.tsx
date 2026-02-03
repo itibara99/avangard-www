@@ -655,20 +655,20 @@ function AvangardPage() {
             </h2>
           </div>
           
-          <div className="relative overflow-hidden rounded-3xl bg-black backdrop-blur-sm border border-cyan-500/30 min-h-[400px] flex items-center">
+          <div className="relative overflow-hidden rounded-3xl bg-black backdrop-blur-sm border border-cyan-500/30 min-h-[500px] flex items-end">
             {/* Background Image Overlay */}
-            <div 
+            <div
               className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
               style={{
                 backgroundImage: `url(${potolkiBg})`
               }}
             ></div>
-            
+
             {/* Dark Overlay */}
             <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
-            
+
             {/* Content */}
-            <div className="relative z-10 w-full px-8 md:px-16 py-12">
+            <div className="relative z-10 w-full px-8 md:px-16 py-12 pb-16">
               <div className="max-w-2xl">
                 <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
                   <span className="bg-gradient-to-r from-gray-100 via-gray-200 to-gray-300 bg-clip-text text-transparent">
