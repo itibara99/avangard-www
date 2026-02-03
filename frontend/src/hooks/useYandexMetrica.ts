@@ -1,4 +1,5 @@
 const YANDEX_METRICA_ID = 106585621;
+const YANDEX_METRICA_ID_2 = 106605914;
 
 export const useYandexMetrica = () => {
   const trackGoal = (goalName: string, params?: Record<string, any>) => {
@@ -6,10 +7,12 @@ export const useYandexMetrica = () => {
       try {
         if (params) {
           window.ym(YANDEX_METRICA_ID, 'reachGoal', goalName, params);
+          window.ym(YANDEX_METRICA_ID_2, 'reachGoal', goalName, params);
         } else {
           window.ym(YANDEX_METRICA_ID, 'reachGoal', goalName);
+          window.ym(YANDEX_METRICA_ID_2, 'reachGoal', goalName);
         }
-        console.log(`[Yandex Metrica] Goal tracked: ${goalName}`, params || '');
+        console.log(`[Yandex Metrica] Goal tracked in both counters: ${goalName}`, params || '');
       } catch (error) {
         console.error('[Yandex Metrica] Error tracking goal:', error);
       }
@@ -20,7 +23,8 @@ export const useYandexMetrica = () => {
     if (typeof window !== 'undefined' && window.ym) {
       try {
         window.ym(YANDEX_METRICA_ID, 'hit', url);
-        console.log(`[Yandex Metrica] Page view tracked: ${url}`);
+        window.ym(YANDEX_METRICA_ID_2, 'hit', url);
+        console.log(`[Yandex Metrica] Page view tracked in both counters: ${url}`);
       } catch (error) {
         console.error('[Yandex Metrica] Error tracking page view:', error);
       }
@@ -33,7 +37,8 @@ export const useYandexMetrica = () => {
     if (typeof window !== 'undefined' && window.ym) {
       try {
         window.ym(YANDEX_METRICA_ID, 'userParams', params);
-        console.log('[Yandex Metrica] User params set:', params);
+        window.ym(YANDEX_METRICA_ID_2, 'userParams', params);
+        console.log('[Yandex Metrica] User params set in both counters:', params);
       } catch (error) {
         console.error('[Yandex Metrica] Error setting user params:', error);
       }
@@ -44,7 +49,8 @@ export const useYandexMetrica = () => {
     if (typeof window !== 'undefined' && window.ym) {
       try {
         window.ym(YANDEX_METRICA_ID, 'notBounce');
-        console.log('[Yandex Metrica] Not bounce called');
+        window.ym(YANDEX_METRICA_ID_2, 'notBounce');
+        console.log('[Yandex Metrica] Not bounce called in both counters');
       } catch (error) {
         console.error('[Yandex Metrica] Error calling notBounce:', error);
       }
