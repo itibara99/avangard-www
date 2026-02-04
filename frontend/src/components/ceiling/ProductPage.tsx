@@ -95,8 +95,6 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderCli
         images: [
           stenvoy,
           sten_1,
-          sten_2,
-          sten_3,
         ],
         model3d: '/3d/sten.glb',
         price: 'от 30 ₽/м',
@@ -420,7 +418,10 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderCli
       }
     };
 
-    return { ...baseProduct, ...products[id] } as Product;
+    const productData = { ...baseProduct, ...products[id] } as Product;
+    // Limit images to first 2 slides
+    productData.images = productData.images.slice(0, 2);
+    return productData;
   };
 
   const product = getProductData(productId);
