@@ -230,8 +230,7 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
           id: 'cor-5',
           name: 'Карниз B-1 однорядный',
           images: [
-            am1,
-            cornices
+            
           ],
           price: 'от 380 ₽/м',
           description: 'Угловой карниз для сложных конфигураций',
