@@ -434,7 +434,12 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
       ]
     };
 
-    return baseProducts[catId as keyof typeof baseProducts] || [];
+    const products = baseProducts[catId as keyof typeof baseProducts] || [];
+    // Limit images to first 2 slides for all products
+    return products.map(product => ({
+      ...product,
+      images: product.images.slice(0, 2)
+    }));
   };
 
   const products = getProductsForCategory(categoryId);
