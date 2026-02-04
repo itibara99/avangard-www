@@ -59,7 +59,7 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
           images: [
             bp40,
             bp40_ch,
-            'https://images.pexels.com/photos/1648776/pexels-photo-1648776.jpeg?auto=compress&cs=tinysrgb&w=400'
+            
           ],
           price: 'от 140 ₽/м',
           description: 'Несущий брус для потолочного крепления натяжных потолков при невозможности монтажа к стенам (керамогранит, зеркала и т.д.), оснащённый гарпунной системой фиксации полотна и креплением под гвоздик',
@@ -167,7 +167,7 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
           images: [
             b2,
             pk14_ch,
-            'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=400'
+           
           ],
           price: 'от 750 ₽/м',
           description: 'Стандартный карниз для штор и портьер',
@@ -181,7 +181,7 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
           images: [
               cornices,
             pk14_ch,
-            'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=400'
+            
           ],
           price: 'от 560 ₽/м',
           description: 'Стандартный карниз для штор и портьер',
@@ -194,7 +194,7 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
           images: [
             cornices,
             pk14_ch,
-            'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=400'
+            
           ],
           price: 'от 520 ₽/м',
           description: 'Двухрядный карниз для тюля и штор',
@@ -219,7 +219,7 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
           images: [
             pk12,
             pk12_ch,
-            'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=400'
+            
           ],
           price: 'от 380 ₽/м',
           description: 'Премиум карниз с улучшенным дизайном',
@@ -355,7 +355,6 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
           id: 'cont-2',
           name: 'Заглушки торцевые ПК-14',
           images: [
-            'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=400',
             furnitures
           ],
           price: '25 ₽/шт',
@@ -380,7 +379,7 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
           images: [
             'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=400',
             furnitures,
-            'https://images.pexels.com/photos/1648776/pexels-photo-1648776.jpeg?auto=compress&cs=tinysrgb&w=400'
+           
           ],
           price: '35 ₽/шт',
           description: 'Прямой соединитель для стыковки профилей',
