@@ -24,7 +24,7 @@ import {
   CheckCircle,
 } from 'lucide-react';
 import AboutSection from '../components/avangard/AboutSection.tsx';
-// Using placeholder images for build
+// Placeholder функция для изображений
 const createPlaceholder = (text: string) => `data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="800" height="600"%3E%3Crect width="800" height="600" fill="%23444"/%3E%3Ctext x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" fill="%23999" font-family="Arial" font-size="24"%3E${encodeURIComponent(text)}%3C/text%3E%3C/svg%3E`;
 
 const potolkiBg = createPlaceholder('Potolki');
@@ -50,7 +50,6 @@ const pergol = createPlaceholder('Pergol');
 const lestnici = createPlaceholder('Lestnici');
 const dush = createPlaceholder('Dush');
 const lift = createPlaceholder('Lift');
-const porogi = createPlaceholder('Porogi');
 const auto = createPlaceholder('Auto');
 const borti = createPlaceholder('Borti');
 const shkafi = createPlaceholder('Shkafi');
@@ -89,10 +88,9 @@ const catalogImages = {
   lestnici: lestnici,
   dush: dush,
   lift: lift,
-  porogi: porogi,
+  porogi: konstrukt,
   auto: auto,
   borti: borti,
- // torgovo: torgovo,
   shkafi: shkafi,
   zhaluzi: zhaluzi,
   teplici: teplici,

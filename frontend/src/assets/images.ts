@@ -1,4 +1,4 @@
-// Using placeholder images for build - replace with actual images when available
+// Placeholder функция для изображений
 const createPlaceholder = (text: string, width = 800, height = 600) =>
   `data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}"%3E%3Crect width="${width}" height="${height}" fill="%23444"/%3E%3Ctext x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" fill="%23999" font-family="Arial" font-size="24"%3E${encodeURIComponent(text)}%3C/text%3E%3C/svg%3E`;
 
@@ -28,7 +28,6 @@ const am1 = createPlaceholder('AM1');
 const furnitures = createPlaceholder('Furnitures');
 const light_lines = createPlaceholder('Light Lines');
 const ceilingSlide = createPlaceholder('Ceiling', 1920, 1080);
-
 
 export {
     bp40, bp40_ch, stenvoy, sten_1, sten_2, sten_3, razdelitel,
