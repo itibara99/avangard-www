@@ -1,33 +1,30 @@
-// Placeholder функция для изображений
-const createPlaceholder = (text: string, width = 800, height = 600) =>
-  `data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}"%3E%3Crect width="${width}" height="${height}" fill="%23444"/%3E%3Ctext x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" fill="%23999" font-family="Arial" font-size="24"%3E${encodeURIComponent(text)}%3C/text%3E%3C/svg%3E`;
+import logo from './logo.png';
+import bp40 from './bp40.jpg';
+import bp40_ch from './ch/bp40 ch.jpg';
+import stenvoy from './stenovoy.jpg';
+import sten_1 from './ch/sten 1 ch.jpg';
+import sten_2 from './ch/sten 2 ch.jpg';
+import sten_3 from './ch/sten 3 ch.jpg';
+import razdelitel from './razdelitel.jpg';
+import razdelitel_ch from './ch/razdelitel ch.jpg';
+import universal from './universal.jpg';
+import universal_ch from './ch/univers ch.jpg';
+import potoloch from './potoloch.jpg';
+import potoloch_ch from './ch/potoloch ch.jpg'
+import z from './z.jpg';
+import z_ch from './ch/z ch.jpg';
+import b2 from './b2.jpg';
+import pk14_ch from './ch/pk14 ch.jpg';
+import cornices from './cornices.jpg';
+import pk15 from './pk15.jpg';
+import pk15_ch from './ch/pk15 ch.jpg';
+import pk12 from './pk12.jpg';
+import pk12_ch from './ch/pk12 ch.jpg';
+import am1 from './AM1.jpg';
+import furnitures from './furnitures.jpg';
+import light_lines from './light-lines.jpg';
+import ceilingSlide from './ceiling.jpg'
 
-const logo = createPlaceholder('Logo', 200, 200);
-const bp40 = createPlaceholder('BP40');
-const bp40_ch = createPlaceholder('BP40 CH');
-const stenvoy = createPlaceholder('Stenovoy');
-const sten_1 = createPlaceholder('Sten 1');
-const sten_2 = createPlaceholder('Sten 2');
-const sten_3 = createPlaceholder('Sten 3');
-const razdelitel = createPlaceholder('Razdelitel');
-const razdelitel_ch = createPlaceholder('Razdelitel CH');
-const universal = createPlaceholder('Universal');
-const universal_ch = createPlaceholder('Universal CH');
-const potoloch = createPlaceholder('Potoloch');
-const potoloch_ch = createPlaceholder('Potoloch CH');
-const z = createPlaceholder('Z');
-const z_ch = createPlaceholder('Z CH');
-const b2 = createPlaceholder('B2');
-const pk14_ch = createPlaceholder('PK14 CH');
-const cornices = createPlaceholder('Cornices');
-const pk15 = createPlaceholder('PK15');
-const pk15_ch = createPlaceholder('PK15 CH');
-const pk12 = createPlaceholder('PK12');
-const pk12_ch = createPlaceholder('PK12 CH');
-const am1 = createPlaceholder('AM1');
-const furnitures = createPlaceholder('Furnitures');
-const light_lines = createPlaceholder('Light Lines');
-const ceilingSlide = createPlaceholder('Ceiling', 1920, 1080);
 
 export {
     bp40, bp40_ch, stenvoy, sten_1, sten_2, sten_3, razdelitel,

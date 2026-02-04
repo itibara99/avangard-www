@@ -58,14 +58,10 @@ const HeroSection: React.FC = () => {
   return (
     <section id="hero" className="relative min-h-screen bg-gradient-to-br from-[#1A1A1A] via-[#3A3A3A] to-[#1A1A1A] flex items-center overflow-hidden">
       {/* Background Video for current slide */}
-      {(slides[currentSlide].video || slides[currentSlide].image) && (
+      {slides[currentSlide].video && (
         <div className="absolute inset-0 z-0">
           {slides[currentSlide].image ?
-              <img
-                src={slides[currentSlide].image}
-                alt={slides[currentSlide].subtitle}
-                className="w-full h-full object-cover opacity-30"
-              /> :
+              <img src={slides[currentSlide].image} alt={slides[currentSlide].subtitle}/> :
               <video
                   key={currentSlide}
                   autoPlay
