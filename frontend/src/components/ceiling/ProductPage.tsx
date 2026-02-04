@@ -21,6 +21,7 @@ import {
   z,
   z_ch,
   b2,
+  b2_ch,
   pk15,
   pk15_ch,
   pk12_ch,
