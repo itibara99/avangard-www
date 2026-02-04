@@ -222,7 +222,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderCli
         name: 'Карниз B-2 PRO',
         images: [
           b2,
-          pk14_ch,
+          b2_ch,
           
         ],
         model3d: '/3d/b2.glb',
