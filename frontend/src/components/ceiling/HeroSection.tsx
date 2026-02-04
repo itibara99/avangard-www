@@ -14,9 +14,9 @@ const HeroSection: React.FC = () => {
      // video: "",
     },
     {
-      title: "Весь ассортимент алюминиевых профилей и по чертежам заказчика",
+      title: "",
       subtitle: "от ООО Авангард",
-      description: "",
+      description: "Весь ассортимент алюминиевых профилей и по чертежам заказчика",
       // image: тут ссылка на изображение,
       href: "/",
       video: "https://xbawwaakkvciyofymepf.supabase.co/storage/v1/object/public/slider-video/Extrude.mp4"
