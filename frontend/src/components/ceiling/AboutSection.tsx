@@ -150,7 +150,7 @@ const AboutSection: React.FC = () => {
                 </li>
                 <li className="flex items-center space-x-3">
                   <CheckCircle className="w-5 h-5 text-yellow-400 flex-shrink-0" />
-                  <span>Постоянное развитие и инновации</span>
+                  <span>Постоянное развитие</span>
                 </li>
               </ul>
             </div>
