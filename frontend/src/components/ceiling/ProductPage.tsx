@@ -418,10 +418,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderCli
       }
     };
 
-    const productData = { ...baseProduct, ...products[id] } as Product;
-    // Limit images to first 2 slides
-    productData.images = productData.images.slice(0, 2);
-    return productData;
+    return { ...baseProduct, ...products[id] } as Product;
   };
 
   const product = getProductData(productId);
