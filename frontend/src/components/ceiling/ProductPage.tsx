@@ -73,7 +73,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderCli
         images: [
           bp40,
           bp40_ch,
-          'https://images.pexels.com/photos/1648776/pexels-photo-1648776.jpeg?auto=compress&cs=tinysrgb&w=400'
+          
         ],
         model3d: "/3d/bp40.glb",
         price: 'от 140 ₽/м',
@@ -118,7 +118,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderCli
         images: [
           cornices,
           pk14_ch,
-          'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=400'
+          
         ],
         model3d: '/3d/pk14.glb',
         price: 'от 560 ₽/м',
@@ -224,7 +224,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderCli
         images: [
           b2,
           pk14_ch,
-          'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=400'
+          
         ],
         model3d: '/3d/b2.glb',
         price: 'от 750 ₽/м',
@@ -288,7 +288,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderCli
         images: [
           pk12,
           pk12_ch,
-          'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=400'
+         
         ],
         model3d: '/3d/pk12.glb',
         price: 'от 380 ₽/м',
@@ -310,7 +310,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderCli
         images: [
           am1,
           pk12_ch,
-          'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=400'
+          
         ],
         model3d: '/3d/b1.glb',
         price: 'от 380 ₽/м',
@@ -331,8 +331,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderCli
         name: 'Световая линия СЛ-40 LED',
         images: [
           light_lines,
-          'https://images.pexels.com/photos/1036936/pexels-photo-1036936.jpeg?auto=compress&cs=tinysrgb&w=400',
-          'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=400'
+          
         ],
         price: '350 ₽/м',
         description: 'LED световая линия с равномерным освещением',
