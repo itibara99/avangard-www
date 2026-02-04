@@ -367,7 +367,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderCli
       'cont-2': {
         name: 'Заглушки торцевые ПК-14',
         images: [
-          furnitures,
+          ,
           ''
         ],
         price: '45 ₽/шт',
