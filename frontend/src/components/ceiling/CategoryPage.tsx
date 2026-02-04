@@ -355,7 +355,7 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
           id: 'cont-2',
           name: 'Заглушки торцевые ПК-14',
           images: [
-            furnitures
+            furnitures,
           ],
           price: '25 ₽/шт',
           description: 'Торцевая заглушка для профилей 40мм',
@@ -377,7 +377,6 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
           id: 'cont-4',
           name: 'Бандажная лента',
           images: [
-            'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=400',
             furnitures,
            
           ],
