@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
-import {ceilingSlide} from "@/assets/images.ts";
+import {ceiling} from "@/assets/images.ts";
 
 const HeroSection: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -10,7 +10,7 @@ const HeroSection: React.FC = () => {
       title: "ДЛЯ НАТЯЖНЫХ ПОТОЛКОВ",
       subtitle: "Алюминиевые профили",
       description: "Высококачественные карнизы, багеты, стеновые, комплектующие и т.д.",
-     // image: ceiling,
+      image: ceiling,
      // video: "",
     },
     {
