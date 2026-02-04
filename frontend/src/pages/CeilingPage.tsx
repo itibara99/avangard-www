@@ -102,7 +102,7 @@ function App() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              НОВИНКА - Карниз B2
+              НОВИНКА - Карниз B-2 PRO
             </h2>
             <p className="text-gray-300 text-lg max-w-2xl mx-auto">
               Изучите наш профиль в деталях. Используйте мышь для вращения и масштабирования модели
@@ -126,10 +126,10 @@ function App() {
                     <div className="absolute bottom-4 left-4 right-4">
                       <div className="bg-black/60 backdrop-blur-sm rounded-lg p-3">
                         <h3 className="text-white font-semibold text-lg mb-1">
-                          Карниз B2
+                          Карниз B-2 PRO
                         </h3>
                         <p className="text-gray-300 text-sm">
-                          Стандартный алюминиевый профиль
+                          Универсальный карниз для скрытой ниши под шторы
                         </p>
                       </div>
                     </div>
