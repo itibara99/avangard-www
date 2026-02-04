@@ -14,6 +14,7 @@ import potoloch_ch from './ch/potoloch ch.jpg'
 import z from './z.jpg';
 import z_ch from './ch/z ch.jpg';
 import b2 from './b2.jpg';
+import b2_ch from './ch/b2 ch.jpg';
 import pk14_ch from './ch/pk14 ch.jpg';
 import cornices from './cornices.jpg';
 import pk15 from './pk15.jpg';
@@ -23,7 +24,8 @@ import pk12_ch from './ch/pk12 ch.jpg';
 import am1 from './AM1.jpg';
 import furnitures from './furnitures.jpg';
 import light_lines from './light-lines.jpg';
-import ceilingSlide from './ceiling.jpg'
+import ceilingSlide from './ceiling.jpg';
+
 
 
 export {
