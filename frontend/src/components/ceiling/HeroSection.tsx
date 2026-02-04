@@ -11,7 +11,7 @@ const HeroSection: React.FC = () => {
       subtitle: "Алюминиевые профили",
       description: "Высококачественные карнизы, багеты, стеновые, комплектующие и т.д.",
       image: "frontend/src/assets/ceiling.jpg",
-     // video: "",
+      video: "",
     },
     {
       title: "ООО АВАНГАРД",
