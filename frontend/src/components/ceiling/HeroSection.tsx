@@ -61,7 +61,11 @@ const HeroSection: React.FC = () => {
       {(slides[currentSlide].video || slides[currentSlide].image) && (
         <div className="absolute inset-0 z-0">
           {slides[currentSlide].image ?
-              <img src={slides[currentSlide].image} alt={slides[currentSlide].subtitle}/> :
+              <img
+                src={slides[currentSlide].image}
+                alt={slides[currentSlide].subtitle}
+                className="w-full h-full object-cover opacity-30"
+              /> :
               <video
                   key={currentSlide}
                   autoPlay
