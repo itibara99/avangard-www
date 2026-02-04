@@ -156,7 +156,7 @@ function App() {
                 <div className="space-y-3 text-sm">
                   <div className="flex justify-between items-center py-2 border-b border-gray-600">
                     <span className="text-gray-400">Материал:</span>
-                    <span className="text-white font-medium">Алюминиевый сплав 6063</span>
+                    <span className="text-white font-medium">Алюминиевый сплав 6060</span>
                   </div>
                   <div className="flex justify-between items-center py-2 border-b border-gray-600">
                     <span className="text-gray-400">Высота профиля:</span>
@@ -192,7 +192,7 @@ function App() {
                   </div>
                   <div className="flex justify-between items-center py-2">
                     <span className="text-gray-400">Стандарт:</span>
-                    <span className="text-white font-medium">ГОСТ 22233-2001</span>
+                    <span className="text-white font-medium">ГОСТ 22233-2025</span>
                   </div>
                 </div>
               </div>
