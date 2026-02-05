@@ -14,7 +14,6 @@ interface Product {
   model3d?: string;
   price: string;
   description: string;
-  rating: number;
   inStock: boolean;
 }
 
