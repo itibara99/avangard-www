@@ -7,7 +7,6 @@ interface ProductCardProps {
   images: string[];
   price: string;
   description: string;
-  rating: number;
   inStock: boolean;
   onProductClick: (productId: string) => void;
   onOrderClick: () => void;
