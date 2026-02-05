@@ -172,7 +172,7 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
           rating: 5,
           inStock: true
         },
-        {
+       /* {
           id: 'cor-1',
           name: 'Карниз ПК-14 стандартный',
           model3d: '/b2.glb',
@@ -198,7 +198,7 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
           description: 'Двухрядный карниз для тюля и штор',
           rating: 5,
           inStock: true
-        },
+        }, */
         {
           id: 'cor-3',
           name: 'Карниз ПК-15',
