@@ -212,7 +212,7 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
           ],
           price: 'от 380 ₽/м',
           description: 'Премиум карниз с улучшенным дизайном',
-          inStock: false
+          inStock: true
         },
         {
           id: 'cor-5',
@@ -329,6 +329,7 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
           name: 'L-вставка для карнизов',
           images: [
           furnitures,
+          inStock: true
             
           ],
           price: '45 ₽/шт',
@@ -366,7 +367,7 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
           ],
           price: '35 ₽/шт',
           description: 'Прямой соединитель для стыковки профилей',
-          inStock: false
+          inStock: true
         },
       /*  {
           id: 'cont-5',
