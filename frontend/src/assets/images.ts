@@ -13,7 +13,6 @@ import potoloch from './potoloch.jpg';
 import potoloch_ch from './ch/potoloch ch.jpg'
 import z from './z.jpg';
 import z_ch from './ch/z ch.jpg';
-import b1 from './b1.jpg';
 import b2 from './b2.jpg';
 import b2_ch from './ch/b2 ch.jpg';
 import pk14_ch from './ch/pk14 ch.jpg';
