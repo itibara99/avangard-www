@@ -20,7 +20,6 @@ import {
   potoloch_ch,
   z,
   z_ch,
-  b1,
   b2,
   b2_ch,
   pk15,
