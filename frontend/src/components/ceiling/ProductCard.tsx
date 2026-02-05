@@ -18,7 +18,6 @@ const ProductCard: React.FC<ProductCardProps> = ({
   images,
   price,
   description,
-  rating,
   inStock,
   onProductClick,
   onOrderClick
