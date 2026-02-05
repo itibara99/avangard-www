@@ -199,7 +199,7 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
             
           ],
           price: 'от 340 ₽/м',
-          description: 'Компактный карниз для небольших окон',
+          description: 'Классический двухрядный карниз',
           inStock: true
         },
         {
@@ -211,7 +211,7 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
             
           ],
           price: 'от 380 ₽/м',
-          description: 'Премиум карниз с улучшенным дизайном',
+          description: 'Классический трёхрядный карниз',
           inStock: true
         },
         {
