@@ -86,7 +86,6 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
           ],
           price: 'от 120 ₽/м',
           description: 'Профиль для соединения двух полотен натяжного потолка в больших помещениях или многоуровневых конструкциях, оснащённый гарпунной системой крепления и пазом для декоративной маскировочной вставки',
-          rating: 4,
           inStock: true
         },
         {
@@ -99,7 +98,6 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
           ],
           price: 'от 77 ₽/м',
           description: 'Премиум профиль с улучшенными характеристиками',
-          rating: 5,
           inStock: false
         },
         {
@@ -112,7 +110,6 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
           ],
           price: 'от 55 ₽/м',
           description: 'Универсальный профиль для любых задач',
-          rating: 4,
           inStock: true
         },
         {
@@ -125,7 +122,6 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
           ],
           price: 'от 47 ₽/м',
           description: 'Экономичный вариант для бюджетных проектов',
-          rating: 4,
           inStock: true
         },
       ],
@@ -166,7 +162,6 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
           ],
           price: 'от 750 ₽/м',
           description: 'Стандартный карниз для штор и портьер',
-          rating: 5,
           inStock: true
         },
        /* {
@@ -205,7 +200,6 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
           ],
           price: 'от 340 ₽/м',
           description: 'Компактный карниз для небольших окон',
-          rating: 5,
           inStock: true
         },
         {
@@ -218,7 +212,6 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
           ],
           price: 'от 380 ₽/м',
           description: 'Премиум карниз с улучшенным дизайном',
-          rating: 5,
           inStock: false
         },
         {
@@ -229,7 +222,6 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
           ],
           price: 'от 380 ₽/м',
           description: 'Угловой карниз для сложных конфигураций',
-          rating: 4,
           inStock: true
         },
         
@@ -341,7 +333,6 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
           ],
           price: '45 ₽/шт',
           description: 'Угловой соединитель для профилей 90 градусов',
-          rating: 5,
           inStock: true
         },
        /* {
@@ -364,7 +355,6 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
           ],
           price: '15 ₽/шт',
           description: 'Настенный крепеж для монтажа профилей',
-          rating: 4,
           inStock: true
         },
         {
@@ -376,7 +366,6 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
           ],
           price: '35 ₽/шт',
           description: 'Прямой соединитель для стыковки профилей',
-          rating: 5,
           inStock: false
         },
       /*  {
