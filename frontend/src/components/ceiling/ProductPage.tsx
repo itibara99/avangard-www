@@ -37,7 +37,6 @@ interface Product {
   model3d: string;
   price: string;
   description: string;
-  rating: number;
   inStock: boolean;
   specifications: { [key: string]: string };
   fullDescription: string;
@@ -62,7 +61,6 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderCli
         pk12
       ],
       model3d: undefined, // No default model available
-      rating: 5,
       inStock: true,
       specifications: {},
       fullDescription: ''
@@ -515,18 +513,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderCli
             <div className="text-3xl font-bold text-yellow-400 mb-4">
               {product.price}
             </div>
-            
-            {/* Rating */}
-            <div className="flex items-center space-x-1 mb-4">
-              {[...Array(5)].map((_, i) => (
-                <Star
-                  key={i}
-                  size={18}
-                  className={i < product.rating ? 'text-yellow-400 fill-current' : 'text-gray-600'}
-                />
-              ))}
-              <span className="text-gray-400 ml-2">({product.rating}/5)</span>
-            </div>
+                       
 
             {/* Stock Status */}
             <div className="mb-6">
