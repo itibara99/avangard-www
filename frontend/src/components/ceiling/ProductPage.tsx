@@ -307,7 +307,6 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderCli
         images: [
           am1,
         
-          
         ],
         model3d: '/3d/b1.glb',
         price: 'от 380 ₽/м',
