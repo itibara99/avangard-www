@@ -353,7 +353,7 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
           images: [
             'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=400'
           ],
-          price: '15 ₽/шт',
+          price: '290 ₽/шт',
           description: 'Настенный крепеж для монтажа профилей',
           inStock: true
         },
