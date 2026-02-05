@@ -4,7 +4,7 @@ import ProductCard from './ProductCard';
 
 import {bp40, bp40_ch, stenvoy, sten_1, sten_2, sten_3, razdelitel,
   razdelitel_ch, universal, universal_ch, potoloch, potoloch_ch,
-  z, z_ch, b1, b2, b2_ch, pk14_ch, cornices, pk15, pk15_ch, pk12, pk12_ch,
+  z, z_ch, b2, b2_ch, pk14_ch, cornices, pk15, pk15_ch, pk12, pk12_ch,
   am1, furnitures} from '@/assets/images.ts'
 
 interface Product {
@@ -351,7 +351,7 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
           id: 'cont-3',
           name: 'Заглушки торцевые B-1',
           images: [
-            'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=400'
+            
           ],
           price: '290 ₽/шт',
           description: 'Настенный крепеж для монтажа профилей',
