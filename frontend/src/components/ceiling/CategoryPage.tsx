@@ -329,7 +329,6 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
           name: 'L-вставка для карнизов',
           images: [
           furnitures,
-          inStock: true
             
           ],
           price: '45 ₽/шт',
