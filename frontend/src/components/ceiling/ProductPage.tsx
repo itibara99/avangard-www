@@ -305,7 +305,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderCli
       'cor-5': {
         name: 'Карниз B-1 однорядный',
         images: [
-          b1,
+          am1,
         
           
         ],
