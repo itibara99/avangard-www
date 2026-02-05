@@ -58,7 +58,7 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
           model3d: '/bp40.glb',
           images: [
             bp40,
-            bp40_ch,
+            
             
           ],
           price: 'от 140 ₽/м',
@@ -72,9 +72,7 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
           model3d: '/sten.glb',
           images: [
             stenvoy,
-            sten_1,
-            sten_2,
-            sten_3,
+            
           ],
           price: 'от 140 ₽/м',
           description: 'Алюминиевый багет крепится к стенам по периметру помещения для надежной фиксации и натяжения полотна, обеспечивая четкий край и эстетичный вид потолка',
@@ -87,7 +85,7 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
           model3d: '/razdel.glb',
           images: [
             razdelitel,
-            razdelitel_ch
+            
           ],
           price: 'от 120 ₽/м',
           description: 'Профиль для соединения двух полотен натяжного потолка в больших помещениях или многоуровневых конструкциях, оснащённый гарпунной системой крепления и пазом для декоративной маскировочной вставки',
@@ -100,7 +98,7 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
           model3d: '/univers.glb',
           images: [
             universal,
-            universal_ch
+            
           ],
           price: 'от 77 ₽/м',
           description: 'Премиум профиль с улучшенными характеристиками',
@@ -113,7 +111,7 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
           model3d: '/potoloch.glb',
           images: [
             potoloch,
-            potoloch_ch
+            
           ],
           price: 'от 55 ₽/м',
           description: 'Универсальный профиль для любых задач',
@@ -126,7 +124,7 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
           model3d: '/z.glb',
           images: [
             z,
-            z_ch
+            
           ],
           price: 'от 47 ₽/м',
           description: 'Экономичный вариант для бюджетных проектов',
@@ -166,7 +164,7 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
           model3d: '/b2.glb',
           images: [
             b2,
-            b2_ch,
+            
            
           ],
           price: 'от 750 ₽/м',
@@ -180,7 +178,7 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
           model3d: '/b2.glb',
           images: [
               cornices,
-            pk14_ch,
+            
             
           ],
           price: 'от 560 ₽/м',
@@ -193,7 +191,7 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
           name: 'Карниз ПК-14 облегченныйй',
           images: [
             cornices,
-            pk14_ch,
+            
             
           ],
           price: 'от 520 ₽/м',
@@ -206,7 +204,7 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
           name: 'Карниз ПК-15',
           images: [
             pk15,
-            pk15_ch,
+            
           ],
           price: 'от 340 ₽/м',
           description: 'Компактный карниз для небольших окон',
@@ -218,7 +216,7 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
           name: 'Карниз ПК-12',
           images: [
             pk12,
-            pk12_ch,
+            
             
           ],
           price: 'от 380 ₽/м',
@@ -341,26 +339,26 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
           id: 'cont-1',
           name: 'L-вставка для карнизов',
           images: [
-
-            'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=400',
-            'https://images.pexels.com/photos/1648776/pexels-photo-1648776.jpeg?auto=compress&cs=tinysrgb&w=400'
+          furnitures,
+            
           ],
           price: '45 ₽/шт',
           description: 'Угловой соединитель для профилей 90 градусов',
           rating: 5,
           inStock: true
         },
-        {
+       /* {
           id: 'cont-2',
           name: 'Заглушки торцевые ПК-14',
           images: [
-            furnitures,
+          
           ],
           price: '25 ₽/шт',
           description: 'Торцевая заглушка для профилей 40мм',
           rating: 5,
           inStock: true
         },
+        */
         {
           id: 'cont-3',
           name: 'Заглушки торцевые B-1',
