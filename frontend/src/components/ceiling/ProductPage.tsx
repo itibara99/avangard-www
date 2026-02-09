@@ -218,7 +218,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderCli
           
         ],
         model3d: '/3d/b2.glb',
-        price: 'от 850 ₽/м',
+        price: '949 ₽/м',
         description: 'Новый карниз для крепления штор в скрытых нишах с улучшеным дизайном и усиленной прочностью',
         fullDescription: 'Карниз B2 обеспечивает надежное крепление штор различного веса и элегантный внешний вид.',
         specifications: {
