@@ -159,7 +159,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderCli
           universal_ch
         ],
         model3d: '/3d/univers.glb',
-        price: 'от 77 ₽/м',
+        price: '84 ₽/м',
         description: 'Премиум профиль с улучшенными характеристиками',
         fullDescription: 'Универсальный профиль подходит для различных типов натяжных потолков.',
         specifications: {
