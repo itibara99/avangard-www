@@ -376,7 +376,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderCli
         images: [
           
         ],
-        price: '45 ₽/шт',
+        price: '300 ₽/комплект',
         description: 'Металл',
         fullDescription: 'Закрывает технический зазор профиля и предает эстетический вид.',
         specifications: {
