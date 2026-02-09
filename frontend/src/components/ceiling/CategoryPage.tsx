@@ -108,7 +108,7 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
             potoloch,
             
           ],
-          price: 'от 55 ₽/м',
+          price: '69 ₽/м',
           description: 'Классический профиль для крепления на потолок',
           inStock: true
         },
