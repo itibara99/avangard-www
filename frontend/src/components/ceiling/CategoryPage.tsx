@@ -135,7 +135,7 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
             
           ],
           price: 'от 850 ₽/м',
-          description: 'Стандартный карниз для штор и портьер',
+          description: 'Новый карниз для крепления штор в скрытых нишах с улучшеным дизайном и усиленной прочностью',
           inStock: true
         },
        /* {
