@@ -356,7 +356,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderCli
         specifications: {
           'Материал': 'ПВХ',
           'Совместимость': 'Все карнизы',
-          'Цвет': 'Белый матовый',
+          'Цвет': 'Белый и чёрный матовый',
           'Вес': '25 г',
           'Упаковка': '50 шт'
         }
