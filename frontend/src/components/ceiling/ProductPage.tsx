@@ -376,7 +376,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderCli
           'Совместимость': 'Металл',
           'Цвет': 'Белый матовый',
           'Вес': '25 г',
-          'Упаковка': '50 шт'
+          'Упаковка': '4 шт'
         }
       },
       'cont-3': {
