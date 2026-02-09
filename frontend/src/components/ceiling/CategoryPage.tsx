@@ -341,7 +341,7 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
           images: [
             b2_zagl,
           ],
-          price: '25 ₽/шт',
+          price: '200 ₽/шт',
           description: 'Торцевая заглушка для профилей 40мм',
           rating: 5,
           inStock: true
