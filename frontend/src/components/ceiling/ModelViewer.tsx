@@ -61,7 +61,7 @@ const ModelViewer: React.FC<ModelViewerProps> = ({
       0.1,
       1000
     );
-    camera.position.set(0, 0, 5);
+    camera.position.set(0, 0, 3);
     cameraRef.current = camera;
 
     // Renderer setup
