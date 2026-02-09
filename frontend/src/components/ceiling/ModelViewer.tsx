@@ -325,7 +325,7 @@ const ModelViewer: React.FC<ModelViewerProps> = ({
       autoRotateTimeout.current = null;
     }
     
-    cameraRef.current.position.set(0, 0, 5);
+    cameraRef.current.position.set(0, 0, 3);
     modelRef.current.rotation.set(0, 0, 0);
     rotationState.current = { x: 0, y: 0 };
     isAutoRotatingRef.current = true;
