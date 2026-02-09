@@ -97,7 +97,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderCli
           sten_1,
         ],
         model3d: '/3d/sten.glb',
-        price: 'от 30 ₽/м',
+        price: 'от 37,5 ₽/м',
         description: 'Усиленный профиль для больших площадей потолков',
         fullDescription: 'Стенвой профиль предназначен для создания надежных креплений в больших помещениях.',
         specifications: {
