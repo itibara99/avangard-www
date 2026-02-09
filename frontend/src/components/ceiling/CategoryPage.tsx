@@ -126,31 +126,6 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
         },
       ],
       cornices: [
-        /* {
-          id: 'std-7',
-          name: 'Профиль BP-55 специальный',
-          images: [
-            'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=400',
-            bp40,
-            'https://images.pexels.com/photos/1648776/pexels-photo-1648776.jpeg?auto=compress&cs=tinysrgb&w=400'
-          ],
-          price: '175 ₽/м',
-          description: 'Специальный профиль для сложных конструкций',
-          rating: 5,
-          inStock: true
-        },
-        {
-          id: 'std-8',
-          name: 'Профиль BP-25 мини',
-          images: [
-            'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=400',
-            'https://images.pexels.com/photos/1648776/pexels-photo-1648776.jpeg?auto=compress&cs=tinysrgb&w=400'
-          ],
-          price: '80 ₽/м',
-          description: 'Минимальный профиль для декоративных элементов',
-          rating: 4,
-          inStock: true
-        } */
         {
           id: 'b2',
           name: 'Карниз B2',
