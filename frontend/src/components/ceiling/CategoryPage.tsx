@@ -305,7 +305,7 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
           furnitures,
             
           ],
-          price: '40 ₽/шт',
+          price: '40 ₽/м',
           description: 'ПВХ-вставка для пазов крепления полотна',
           inStock: false,
         },
