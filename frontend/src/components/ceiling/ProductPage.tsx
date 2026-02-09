@@ -399,8 +399,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderCli
       'cont-4': {
         name: 'Бандажная лента',
         images: [
-          furnitures,
-          ''
+          
         ],
         price: '45 ₽/шт',
         description: 'TL-вставка для карнизов',
