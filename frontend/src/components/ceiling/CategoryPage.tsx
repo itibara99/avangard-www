@@ -333,7 +333,7 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
           ],
           price: '45 ₽/шт',
           description: 'Угловой соединитель для профилей 90 градусов',
-          inStock: true
+          inStock: false,
         },
         {
           id: 'cont-2',
