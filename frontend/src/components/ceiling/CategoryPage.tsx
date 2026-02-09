@@ -134,7 +134,7 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
             b2,
             
           ],
-          price: 'от 850 ₽/м',
+          price: '949 ₽/м',
           description: 'Новый карниз для крепления штор в скрытых нишах с улучшеным дизайном и усиленной прочностью',
           inStock: true
         },
