@@ -282,7 +282,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderCli
          
         ],
         model3d: '/3d/pk12.glb',
-        price: 'от 380 ₽/м',
+        price: 'от 519 ₽/м',
         description: 'Премиум карниз с улучшенным дизайном',
         fullDescription: 'Карниз ПК-12 представляет собой премиум решение для современных интерьеров.',
         specifications: {
