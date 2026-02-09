@@ -335,9 +335,9 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
           description: 'Угловой соединитель для профилей 90 градусов',
           inStock: true
         },
-       /* {
+        {
           id: 'cont-2',
-          name: 'Заглушки торцевые ПК-14',
+          name: 'Заглушки торцевые B2-PRO',
           images: [
           
           ],
@@ -346,7 +346,7 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
           rating: 5,
           inStock: true
         },
-        */
+        
         {
           id: 'cont-3',
           name: 'Заглушки торцевые B-1',
@@ -361,7 +361,7 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
           id: 'cont-4',
           name: 'Бандажная лента',
           images: [
-            furnitures,
+            ,
            
           ],
           price: '35 ₽/шт',
