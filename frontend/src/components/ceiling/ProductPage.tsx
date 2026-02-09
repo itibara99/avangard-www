@@ -393,7 +393,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderCli
           'Совместимость': 'Профили 40мм',
           'Цвет': 'Белый матовый',
           'Вес': '25 г',
-          'Упаковка': '50 шт'
+          'Упаковка': '4 шт'
         }
       },
       'cont-4': {
