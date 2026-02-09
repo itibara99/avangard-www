@@ -401,8 +401,8 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderCli
           
         ],
         price: '45 ₽/шт',
-        description: 'TL-вставка для карнизов',
-        fullDescription: 'Закрывает технический зазор профиля и предает эстетический вид.',
+        description: 'Бандажная лента для стыковки профилей',
+        fullDescription: 'Соединяет профили по длине.',
         specifications: {
           'Материал': 'Алюминиевый сплав АД31',
           'Совместимость': 'Все карнизы',
