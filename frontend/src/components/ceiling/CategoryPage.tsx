@@ -120,7 +120,7 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
             z,
             
           ],
-          price: 'от 47 ₽/м',
+          price: '59 ₽/м',
           description: 'Профиль для перепадов уровня полотна',
           inStock: true
         },
