@@ -60,7 +60,7 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
             
             
           ],
-          price: 'от 140 ₽/м',
+          price: '189 ₽/м',
           description: 'Несущий брус для потолочного крепления натяжных потолков при невозможности монтажа к стенам (керамогранит, зеркала и т.д.), оснащённый гарпунной системой фиксации полотна и креплением под гвоздик',
           inStock: true
         },
@@ -72,7 +72,7 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
             stenvoy,
             
           ],
-          price: 'от 40 ₽/м',
+          price: 'от 37,5 ₽/м',
           description: 'Алюминиевый багет крепится к стенам по периметру помещения для надежной фиксации и натяжения полотна, обеспечивая четкий край и эстетичный вид потолка',
           inStock: true
         },
@@ -84,7 +84,7 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
             razdelitel,
             
           ],
-          price: 'от 120 ₽/м',
+          price: '149 ₽/м',
           description: 'Профиль для соединения двух полотен натяжного потолка в больших помещениях или многоуровневых конструкциях, оснащённый гарпунной системой крепления и пазом для декоративной маскировочной вставки',
           inStock: true
         },
@@ -96,7 +96,7 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
             universal,
             
           ],
-          price: 'от 77 ₽/м',
+          price: '84 ₽/м',
           description: 'Классический профиль для крепления на стены и потолок',
           inStock: false
         },
