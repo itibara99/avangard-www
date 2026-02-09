@@ -97,7 +97,7 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
             
           ],
           price: 'от 77 ₽/м',
-          description: 'Премиум профиль с улучшенными характеристиками',
+          description: 'Классический профиль для крепления на стены и потолок',
           inStock: false
         },
         {
