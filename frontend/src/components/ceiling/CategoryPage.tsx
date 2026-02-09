@@ -315,7 +315,7 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
           images: [
             b2_zagl,
           ],
-          price: '200 ₽/шт',
+          price: '300 ₽/шт',
           description: 'Декоративные торцевые заглушки для карнизов B2-PRO',
           rating: 5,
           inStock: true
@@ -327,7 +327,7 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
           images: [
             
           ],
-          price: '180 ₽/шт',
+          price: '300 ₽/шт',
           description: 'Декоративные торцевые заглушки для однорядных карнизов',
           inStock: true
         },
