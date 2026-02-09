@@ -343,7 +343,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderCli
           furnitures,
           ''
         ],
-        price: '45 ₽/шт',
+        price: '40 ₽/шт',
         description: 'П-вставка для карнизов',
         fullDescription: 'Закрывает технический зазор профиля и предает эстетический вид.',
         specifications: {
