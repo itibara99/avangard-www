@@ -331,7 +331,7 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
             
           ],
           price: '45 ₽/шт',
-          description: 'Угловой соединитель для профилей 90 градусов',
+          description: 'ПВХ-вставка для пазов крепления полотна',
           inStock: false,
         },
         {
