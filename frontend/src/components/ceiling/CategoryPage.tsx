@@ -300,12 +300,12 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
       contour: [
         {
           id: 'cont-1',
-          name: 'L-вставка для карнизов',
+          name: 'П-вставка для карнизов',
           images: [
           furnitures,
             
           ],
-          price: '45 ₽/шт',
+          price: '40 ₽/шт',
           description: 'ПВХ-вставка для пазов крепления полотна',
           inStock: false,
         },
