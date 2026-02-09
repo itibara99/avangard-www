@@ -198,7 +198,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderCli
           z_ch
         ],
         model3d: '/3d/potoloch.glb',
-        price: 'от 47 ₽/м',
+        price: 'от 59 ₽/м',
         description: 'Экономичный вариант для бюджетных проектов',
         fullDescription: 'Отбойник Z используется для создания защитных элементов в конструкции потолка.',
         specifications: {
