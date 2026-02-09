@@ -363,9 +363,9 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderCli
         }
       },
       'cont-2': {
-        name: 'Заглушки торцевые ПК-14',
+        name: 'Заглушки торцевые B2-PRO',
         images: [
-          
+          b2_zagl,
         ],
         price: '45 ₽/шт',
         description: 'TL-вставка для карнизов',
@@ -382,8 +382,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderCli
       'cont-3': {
         name: 'Заглушки торцевые B-1',
         images: [
-          furnitures,
-          ''
+          
         ],
         price: '45 ₽/шт',
         description: 'TL-вставка для карнизов',
