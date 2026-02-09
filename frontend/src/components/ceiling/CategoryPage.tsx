@@ -352,8 +352,8 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
           images: [
             
           ],
-          price: '290 ₽/шт',
-          description: 'Настенный крепеж для монтажа профилей',
+          price: '180 ₽/шт',
+          description: 'Декоративные торцевые заглушки',
           inStock: true
         },
         {
