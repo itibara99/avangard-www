@@ -158,7 +158,6 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
           images: [
             b2,
             
-           
           ],
           price: 'от 850 ₽/м',
           description: 'Стандартный карниз для штор и портьер',
