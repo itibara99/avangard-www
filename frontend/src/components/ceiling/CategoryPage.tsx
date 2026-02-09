@@ -182,7 +182,7 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
             pk15,
             
           ],
-          price: 'от 340 ₽/м',
+          price: '459 ₽/м',
           description: 'Классический двухрядный карниз',
           inStock: true
         },
