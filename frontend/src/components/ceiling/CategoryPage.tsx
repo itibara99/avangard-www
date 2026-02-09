@@ -338,7 +338,7 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
             ,
            
           ],
-          price: '35 ₽/шт',
+          price: '40 ₽/м',
           description: 'Прямой соединитель для стыковки профилей',
           inStock: true
         },
