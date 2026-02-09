@@ -268,7 +268,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderCli
         ],
         model3d: '/3d/pk15.glb',
         price: 'от 340 ₽/м',
-        description: 'Компактный карниз для небольших окон',
+        description: 'Классическое решение проверенное временем',
         fullDescription: 'Карниз ПК-15 идеально подходит для небольших помещений.',
         specifications: {
           'Материал': 'Алюминиевый сплав 6063',
