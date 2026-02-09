@@ -45,7 +45,7 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
     { id: 'standard', title: 'Стандартные профили', count: 6 },
     { id: 'cornices', title: 'Карнизы', count: 4 },
    // { id: 'light', title: 'Световые линии', count: 8 },
-    { id: 'contour', title: 'Комплектующие', count: 3 }
+    { id: 'contour', title: 'Комплектующие', count: 4 }
   ];
 
   const getProductsForCategory = (catId: string): Product[] => {
