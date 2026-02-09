@@ -339,7 +339,7 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
           id: 'cont-2',
           name: 'Заглушки торцевые B2-PRO',
           images: [
-          
+            b2_zagl,
           ],
           price: '25 ₽/шт',
           description: 'Торцевая заглушка для профилей 40мм',
