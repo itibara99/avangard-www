@@ -344,7 +344,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderCli
           ''
         ],
         price: '45 ₽/шт',
-        description: 'TL-вставка для карнизов',
+        description: 'П-вставка для карнизов',
         fullDescription: 'Закрывает технический зазор профиля и предает эстетический вид.',
         specifications: {
           'Материал': 'ПВХ',
