@@ -349,7 +349,7 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
         
         {
           id: 'cont-3',
-          name: 'Заглушки торцевые B-1',
+          name: 'Заглушки торцевые B-1 PRO',
           images: [
             
           ],
