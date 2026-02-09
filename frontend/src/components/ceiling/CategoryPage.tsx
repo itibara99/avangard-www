@@ -160,7 +160,7 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
             
            
           ],
-          price: 'от 750 ₽/м',
+          price: 'от 850 ₽/м',
           description: 'Стандартный карниз для штор и портьер',
           inStock: true
         },
