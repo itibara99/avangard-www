@@ -338,7 +338,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderCli
         }
       },
       'cont-1': {
-        name: 'TL-вставка для карнизов',
+        name: 'П-вставка для карнизов',
         images: [
           furnitures,
           ''
