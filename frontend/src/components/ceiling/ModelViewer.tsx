@@ -42,7 +42,7 @@ const ModelViewer: React.FC<ModelViewerProps> = ({
     const delta = e.deltaY > 0 ? 0.5 : -0.5;
     cameraRef.current.position.z = Math.max(
       1,
-      Math.min(10, cameraRef.current.position.z + delta)
+      Math.min(8, cameraRef.current.position.z + delta)
     );
   };
 
