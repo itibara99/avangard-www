@@ -51,6 +51,7 @@ interface ProductPageProps {
 
 const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderClick }) => {
   const [currentImageSlide, setCurrentImageSlide] = useState(0);
+  const [orderNote, setOrderNote] = useState('');
 
   // Mock product data - in real app this would come from API
   const getProductData = (id: string): Product => {
@@ -502,7 +503,21 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderCli
             <div className="text-3xl font-bold text-yellow-400 mb-4">
               {product.price}
             </div>
-                       
+
+            {/* Order Note */}
+            <div className="mb-4">
+              <label htmlFor="orderNote" className="block text-gray-300 text-sm font-medium mb-2">
+                Комментарий к заказу
+              </label>
+              <textarea
+                id="orderNote"
+                value={orderNote}
+                onChange={(e) => setOrderNote(e.target.value)}
+                placeholder="Укажите особые пожелания или детали заказа..."
+                className="w-full bg-[#2A2A2A] border border-gray-600 rounded-lg p-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent transition-all resize-none"
+                rows={4}
+              />
+            </div>
 
             {/* Stock Status */}
             <div className="mb-6">
