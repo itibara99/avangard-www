@@ -138,7 +138,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderCli
           razdelitel_ch
         ],
         model3d: '/3d/razdel.glb',
-        price: 'от 115 ₽/м',
+        price: '149 ₽/м',
         description: 'Компактный профиль для небольших помещений',
         fullDescription: 'Разделитель предназначен для создания переходов между различными уровнями потолка.',
         specifications: {
