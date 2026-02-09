@@ -41,6 +41,7 @@ interface Product {
   inStock: boolean;
   specifications: { [key: string]: string };
   fullDescription: string;
+  priceBanner?: string;
 }
 
 interface ProductPageProps {
@@ -74,12 +75,13 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderCli
         images: [
           bp40,
           bp40_ch,
-          
+
         ],
         model3d: "/3d/bp40.glb",
         price: '189 ₽/м',
         description: 'Классический профиль для натяжных потолков с теневым зазором',
         fullDescription: 'Профиль BP-40 - это классическое решение для создания натяжных потолков с эффектом теневого зазора. Изготовлен из высококачественного алюминиевого сплава, обеспечивает надежное крепление полотна и создает элегантный переход между стеной и потолком.',
+        priceBanner: 'Хит продаж',
         specifications: {
           'Материал': 'Алюминиевый сплав АД31',
           'Высота профиля': '40 мм',
@@ -115,12 +117,13 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderCli
         images: [
           cornices,
           pk14_ch,
-          
+
         ],
         model3d: '/3d/pk14.glb',
         price: 'от 560 ₽/м',
         description: 'Стандартный карниз для штор и портьер',
         fullDescription: 'Карниз ПК-14 обеспечивает надежное крепление штор различного веса.',
+        priceBanner: 'Лучшая цена',
         specifications: {
           'Материал': 'Алюминиевый сплав АД31',
           'Высота профиля': '45 мм',
@@ -216,12 +219,13 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderCli
         images: [
           b2,
           b2_ch,
-          
+
         ],
         model3d: '/3d/b2.glb',
         price: '949 ₽/м',
         description: 'Новый карниз для крепления штор в скрытых нишах с улучшеным дизайном и усиленной прочностью',
         fullDescription: 'Карниз B2 обеспечивает надежное крепление штор различного веса и элегантный внешний вид.',
+        priceBanner: 'Новинка 2024',
         specifications: {
           'Материал': 'Алюминиевый сплав АД31',
           'Высота профиля': '63.5 мм',
@@ -280,12 +284,13 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderCli
         images: [
           pk12,
           pk12_ch,
-         
+
         ],
         model3d: '/3d/pk12.glb',
         price: '519 ₽/м',
         description: 'Премиум карниз с улучшенным дизайном',
         fullDescription: 'Карниз ПК-12 представляет собой премиум решение для современных интерьеров.',
+        priceBanner: 'Премиум качество',
         specifications: {
           'Материал': 'Алюминиевый сплав АД31',
           'Высота профиля': '52 мм',
@@ -301,12 +306,13 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderCli
         name: 'Карниз B-1 однорядный',
         images: [
           am1,
-        
+
         ],
         model3d: '/3d/b1.glb',
         price: 'от 380 ₽/м',
         description: 'Однорядный карниз с пазом для светодиодной ленты',
         fullDescription: 'Карниз B-1 представляет собой премиум решение для современных интерьеров.',
+        priceBanner: 'Со встроенной подсветкой',
         specifications: {
           'Материал': 'Алюминиевый сплав АД31',
           'Высота профиля': '42,6 мм',
@@ -322,11 +328,12 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderCli
         name: 'Световая линия СЛ-40 LED',
         images: [
           light_lines,
-          
+
         ],
         price: '350 ₽/м',
         description: 'LED световая линия с равномерным освещением',
         fullDescription: 'Световая линия СЛ-40 обеспечивает равномерное LED освещение по всей длине профиля.',
+        priceBanner: 'Энергосберегающая',
         specifications: {
           'Материал': 'Алюминиевый сплав АД31',
           'Высота профиля': '40 мм',
@@ -503,6 +510,16 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderCli
             <div className="text-3xl font-bold text-yellow-400 mb-4">
               {product.price}
             </div>
+
+            {/* Price Banner */}
+            {product.priceBanner && (
+              <div className="mb-4 bg-gradient-to-r from-yellow-500/20 to-yellow-600/20 border-l-4 border-yellow-400 rounded-lg px-4 py-3 flex items-center space-x-2">
+                <Star size={20} className="text-yellow-400 fill-yellow-400 flex-shrink-0" />
+                <span className="text-yellow-300 font-bold text-sm uppercase tracking-wide">
+                  {product.priceBanner}
+                </span>
+              </div>
+            )}
 
             {/* Order Note */}
             <div className="mb-4">
