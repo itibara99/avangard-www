@@ -138,6 +138,16 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
           description: 'Новый карниз для крепления штор в скрытых нишах с улучшеным дизайном и усиленной прочностью',
           inStock: true
         },
+        {
+          id: 'cor-5',
+          name: 'Карниз B-1 однорядный',
+          images: [
+            am1,
+          ],
+          price: 'от 380 ₽/м',
+          description: 'Новый однорядный карниз с пазом для световой линии',
+          inStock: true
+        },
        /* {
           id: 'cor-1',
           name: 'Карниз ПК-14 стандартный',
@@ -186,16 +196,6 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
           ],
           price: 'от 380 ₽/м',
           description: 'Классический трёхрядный карниз',
-          inStock: true
-        },
-        {
-          id: 'cor-5',
-          name: 'Карниз B-1 однорядный',
-          images: [
-            am1,
-          ],
-          price: 'от 380 ₽/м',
-          description: 'Новый однорядный карниз с пазом для световой линии',
           inStock: true
         },
         
