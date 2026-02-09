@@ -260,7 +260,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderCli
           pk15_ch,
         ],
         model3d: '/3d/pk15.glb',
-        price: 'от 459 ₽/м',
+        price: '459 ₽/м',
         description: 'Классическое решение проверенное временем',
         fullDescription: 'Карниз ПК-15 идеально подходит для небольших помещений.',
         specifications: {
@@ -282,7 +282,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderCli
          
         ],
         model3d: '/3d/pk12.glb',
-        price: 'от 519 ₽/м',
+        price: '519 ₽/м',
         description: 'Премиум карниз с улучшенным дизайном',
         fullDescription: 'Карниз ПК-12 представляет собой премиум решение для современных интерьеров.',
         specifications: {
