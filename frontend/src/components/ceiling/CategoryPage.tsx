@@ -342,52 +342,6 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
           description: 'Прямой соединитель для стыковки профилей',
           inStock: true
         },
-      /*  {
-          id: 'cont-5',
-          name: 'Подвес потолочный ПП-1',
-          images: [
-            'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=400',
-            'src/assets/furnitures.jpg'
-          ],
-          price: '20 ₽/шт',
-          description: 'Потолочный подвес для крепления профилей',
-          rating: 4,
-          inStock: true
-        },
-        {
-          id: 'cont-6',
-          name: 'Уплотнитель резиновый УР-5',
-          images: [
-            'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=400'
-          ],
-          price: '80 ₽/м',
-          description: 'Резиновый уплотнитель для герметизации',
-          rating: 4,
-          inStock: true
-        },
-        {
-          id: 'cont-7',
-          name: 'Саморез с пресс-шайбой СПШ-25',
-          images: [
-            'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=400',
-            'src/assets/furnitures.jpg'
-          ],
-          price: '2 ₽/шт',
-          description: 'Саморез с пресс-шайбой для крепления',
-          rating: 5,
-          inStock: true
-        },
-        {
-          id: 'cont-8',
-          name: 'Дюбель распорный ДР-6',
-          images: [
-            'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=400'
-          ],
-          price: '3 ₽/шт',
-          description: 'Распорный дюбель для крепления к стене',
-          rating: 4,
-          inStock: true
-        } */
       ]
     };
 
