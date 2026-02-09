@@ -195,7 +195,7 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
             am1,
           ],
           price: 'от 380 ₽/м',
-          description: 'Угловой карниз для сложных конфигураций',
+          description: 'Новый однорядный карниз с пазом для световой линии',
           inStock: true
         },
         
