@@ -354,7 +354,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderCli
         description: 'TL-вставка для карнизов',
         fullDescription: 'Закрывает технический зазор профиля и предает эстетический вид.',
         specifications: {
-          'Материал': 'Алюминиевый сплав АД31',
+          'Материал': 'ПВХ',
           'Угол соединения': '90°',
           'Совместимость': 'Профили 40мм',
           'Цвет': 'Белый матовый',
