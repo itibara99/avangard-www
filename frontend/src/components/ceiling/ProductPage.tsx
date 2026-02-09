@@ -165,7 +165,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderCli
         specifications: {
           'Материал': 'Алюминиевый сплав АД31',
           'Длина': '2.0 м / 2.5 м',
-          'Цвет': '',
+          'Цвет': 'Алюминий без покрытия',
           'Вес': '156 гр/м',
           'Рабочая температура': '-40°C до +80°C'
         }
