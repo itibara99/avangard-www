@@ -407,7 +407,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderCli
         specifications: {
           'Материал': 'Алюминиевый сплав АД31',
           'Совместимость': 'Все карнизы',
-          'Цвет': 'Белый матовый',
+          'Цвет': 'Алюминий без покрытия',
           'Вес': '25 г',
           'Упаковка': '50 шт'
         }
