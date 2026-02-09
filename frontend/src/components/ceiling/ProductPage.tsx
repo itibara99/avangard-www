@@ -359,7 +359,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderCli
         images: [
           b2_zagl,
         ],
-        price: '45 ₽/шт',
+        price: '300 ₽/комплект',
         description: 'TL-вставка для карнизов',
         fullDescription: 'Закрывает технический зазор профиля и предает эстетический вид.',
         specifications: {
