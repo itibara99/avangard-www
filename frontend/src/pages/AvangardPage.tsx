@@ -24,6 +24,7 @@ import {
   CheckCircle,
 } from 'lucide-react';
 import AboutSection from '../components/avangard/AboutSection.tsx';
+import CookieConsent from '../components/shared/CookieConsent';
 import potolkiBg from '../assets/ceiling.jpg';
 import potolkiProfile from '../assets/ceiling.jpg';
 import obshestroy from '../assets/obshestroy.jpg';
@@ -1362,6 +1363,8 @@ function AvangardPage() {
           </div>
         </div>
       </footer>
+
+      <CookieConsent theme="avangard" />
     </div>
   );
 }

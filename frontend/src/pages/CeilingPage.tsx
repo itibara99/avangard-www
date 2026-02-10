@@ -9,6 +9,7 @@ import ContactForm from '../components/ceiling/ContactForm';
 import ContactSection from '../components/ceiling/ContactSection';
 import Footer from '../components/ceiling/Footer';
 import ModelViewer from '../components/ceiling/ModelViewer';
+import CookieConsent from '../components/shared/CookieConsent';
 import {b2} from "../assets/images.ts";
 
 function App() {
@@ -73,6 +74,7 @@ function App() {
           onOrderClick={handleOrderClick}
         />
         <Footer />
+        <CookieConsent theme="ceiling" />
       </div>
     );
   }
@@ -90,6 +92,7 @@ function App() {
           onOrderClick={handleOrderClick}
         />
         <Footer />
+        <CookieConsent theme="ceiling" />
       </div>
     );
   }
@@ -219,6 +222,7 @@ function App() {
       <ContactForm />
       <ContactSection />
       <Footer />
+      <CookieConsent theme="ceiling" />
     </div>
   );
 }
