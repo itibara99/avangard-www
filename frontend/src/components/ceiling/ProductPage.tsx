@@ -339,7 +339,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderCli
         price: '350 ₽/м',
         description: 'LED световая линия с равномерным освещением',
         fullDescription: 'Световая линия СЛ-40 обеспечивает равномерное LED освещение по всей длине профиля.',
-        priceBanner: 'Энергосберегающая',
+        priceBanner: 'На средний и крупный опт цена договорная',
         specifications: {
           'Материал': 'Алюминиевый сплав АД31',
           'Высота профиля': '40 мм',
