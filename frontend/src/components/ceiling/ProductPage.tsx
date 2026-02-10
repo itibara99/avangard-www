@@ -273,6 +273,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderCli
         price: '459 ₽/м',
         description: 'Классическое решение проверенное временем',
         fullDescription: 'Карниз ПК-15 идеально подходит для небольших помещений.',
+        priceBanner: 'На средний и крупный опт цена договорная',
         specifications: {
           'Материал': 'Алюминиевый сплав АД31',
           'Высота профиля': '52 мм',
