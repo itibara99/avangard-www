@@ -24,7 +24,6 @@ import {
   CheckCircle,
 } from 'lucide-react';
 import AboutSection from '../components/avangard/AboutSection.tsx';
-import { ceilingSlide, logo } from '../assets/images';
 import potolkiBg from '../assets/potolki1.jpg';
 import potolkiProfile from '../assets/potolki1.jpg';
 import obshestroy from '../assets/obshestroy.jpg';
