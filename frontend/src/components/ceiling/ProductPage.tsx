@@ -145,6 +145,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderCli
         price: '149 ₽/м',
         description: 'Компактный профиль для небольших помещений',
         fullDescription: 'Разделитель предназначен для создания переходов между различными уровнями потолка.',
+        priceBanner: 'На средний и крупный опт цена договорная',
         specifications: {
           'Материал': 'Алюминиевый сплав АД31',
           'Высота профиля': '30 мм',
