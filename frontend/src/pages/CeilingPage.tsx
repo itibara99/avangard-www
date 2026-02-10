@@ -128,9 +128,15 @@ function App() {
                         <h3 className="text-white font-semibold text-lg mb-1">
                           Карниз B-2 PRO
                         </h3>
-                        <p className="text-gray-300 text-sm">
+                        <p className="text-gray-300 text-sm mb-3">
                           Универсальный карниз для скрытой ниши под шторы
                         </p>
+                        <button
+                          onClick={() => handleProductClick('b2')}
+                          className="w-full bg-yellow-400 hover:bg-yellow-500 text-black font-semibold py-2 px-4 rounded-lg transition-all duration-300 transform hover:scale-105"
+                        >
+                          Перейти
+                        </button>
                       </div>
                     </div>
                   </div>
