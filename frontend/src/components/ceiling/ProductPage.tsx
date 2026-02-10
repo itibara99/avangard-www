@@ -167,6 +167,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderCli
         price: '84 ₽/м',
         description: 'Профиль для крепления к стене или потолку',
         fullDescription: 'Универсальный профиль подходит для различных типов натяжных потолков.',
+        priceBanner: 'На средний и крупный опт цена договорная',
         specifications: {
           'Материал': 'Алюминиевый сплав АД31',
           'Длина': '2.0 м / 2.5 м',
