@@ -208,6 +208,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderCli
         price: '59 ₽/м',
         description: 'Экономичный вариант для бюджетных проектов',
         fullDescription: 'Отбойник Z используется для создания защитных элементов в конструкции потолка.',
+        priceBanner: 'На средний и крупный опт цена договорная',
         specifications: {
           'Материал': 'Алюминиевый сплав АД31',
           'Толщина стенки': '0.8 мм',
