@@ -186,6 +186,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderCli
         price: '69 ₽/м',
         description: 'Универсальный профиль для любых задач',
         fullDescription: 'Потолочный профиль обеспечивает надежное крепление к потолочным конструкциям.',
+        priceBanner: 'На средний и крупный опт цена договорная',
         specifications: {
           'Материал': 'Алюминиевый сплав АД31',
           'Высота профиля': '42 мм',
