@@ -251,6 +251,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderCli
         price: 'от 520 ₽/м',
         description: 'Двухрядный карниз для тюля и штор',
         fullDescription: 'Облегченная версия карниза ПК-14 для легких тканей.',
+        priceBanner: 'На средний и крупный опт цена договорная',
         specifications: {
           'Материал': 'Алюминиевый сплав АД31',
           'Высота профиля': '43.5 мм',
