@@ -296,7 +296,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderCli
         price: '519 ₽/м',
         description: 'Премиум карниз с улучшенным дизайном',
         fullDescription: 'Карниз ПК-12 представляет собой премиум решение для современных интерьеров.',
-        priceBanner: 'Премиум качество',
+        priceBanner: 'На средний и крупный опт цена договорная',
         specifications: {
           'Материал': 'Алюминиевый сплав АД31',
           'Высота профиля': '52 мм',
