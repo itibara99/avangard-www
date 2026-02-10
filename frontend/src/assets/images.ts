@@ -14,6 +14,7 @@ import potoloch_ch from './ch/potoloch ch.jpg'
 import z from './z.jpg';
 import z_ch from './ch/z ch.jpg';
 import b2 from './b2.jpg';
+import b2_ch from './b2 ch.jpg';
 import b2_zagl from './b2 zagl.jpg';
 import pk14_ch from './ch/pk14 ch.jpg';
 import cornices from './cornices.jpg';
