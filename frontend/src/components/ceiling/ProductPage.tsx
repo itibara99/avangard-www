@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { ArrowLeft, ChevronLeft, ChevronRight, ShoppingCart, Star } from 'lucide-react';
+import React from 'react';
+import { ArrowLeft, ShoppingCart } from 'lucide-react';
 import ModelViewer from './ModelViewer';
 
 import {
@@ -51,9 +51,6 @@ interface ProductPageProps {
 }
 
 const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderClick }) => {
-  const [currentImageSlide, setCurrentImageSlide] = useState(0);
-
-  // Mock product data - in real app this would come from API
   const getProductData = (id: string): Product => {
     const baseProduct = {
       id,
@@ -425,14 +422,6 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderCli
 
   const product = getProductData(productId);
 
-  const nextImageSlide = () => {
-    setCurrentImageSlide((prev) => (prev + 1) % product.images.length);
-  };
-
-  const prevImageSlide = () => {
-    setCurrentImageSlide((prev) => (prev - 1 + product.images.length) % product.images.length);
-  };
-
   return (
     <div className="min-h-screen bg-[#1A1A1A] pt-16">
       <div className="container mx-auto px-6 md:px-8 lg:px-12 py-8">
@@ -448,45 +437,16 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderCli
         {/* Product Title */}
         <h1 className="text-3xl font-bold text-white mb-8">{product.name}</h1>
 
-        {/* Top Section: Image Slider + 3D Model */}
+        {/* Top Section: Image + 3D Model */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-          {/* Image Slider */}
+          {/* Product Image */}
           <div className="bg-[#3A3A3A] rounded-lg overflow-hidden">
-            <div className="relative h-96 grid place-items-center">
+            <div className="h-96 grid place-items-center">
               <img
-                src={product.images[currentImageSlide]}
+                src={product.images[0]}
                 alt={product.name}
                 className="h-full w-auto object-contain"
               />
-              
-              {/* Navigation Arrows */}
-              <button
-                onClick={prevImageSlide}
-                className="absolute left-2 top-1/2 transform -translate-y-1/2 text-white/70 hover:text-yellow-400 transition-colors duration-200 bg-black/30 rounded-full p-2"
-              >
-                <ChevronLeft size={24} />
-              </button>
-              <button
-                onClick={nextImageSlide}
-                className="absolute right-2 top-1/2 transform -translate-y-1/2 text-white/70 hover:text-yellow-400 transition-colors duration-200 bg-black/30 rounded-full p-2"
-              >
-                <ChevronRight size={24} />
-              </button>
-
-              {/* Slide Indicators */}
-              <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-2">
-                {product.images.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentImageSlide(index)}
-                    className={`w-3 h-3 rounded-full transition-all duration-200 ${
-                      index === currentImageSlide 
-                        ? 'bg-yellow-400 scale-125' 
-                        : 'bg-white/30 hover:bg-white/60'
-                    }`}
-                  />
-                ))}
-              </div>
             </div>
           </div>
 
