@@ -513,8 +513,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderCli
 
             {/* Price Banner */}
             {product.priceBanner && (
-              <div className="mb-4 bg-gradient-to-r from-yellow-500/20 to-yellow-600/20 border-l-4 border-yellow-400 rounded-lg px-4 py-3 flex items-center space-x-2">
-                <Star size={20} className="text-yellow-400 fill-yellow-400 flex-shrink-0" />
+              <div className="mb-4 bg-gradient-to-r from-yellow-500/20 to-yellow-600/20 border-l-4 border-yellow-400 rounded-lg px-4 py-3">
                 <span className="text-yellow-300 font-bold text-sm uppercase tracking-wide">
                   {product.priceBanner}
                 </span>
