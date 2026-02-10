@@ -318,7 +318,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderCli
         price: 'от 380 ₽/м',
         description: 'Однорядный карниз с пазом для светодиодной ленты',
         fullDescription: 'Карниз B-1 представляет собой премиум решение для современных интерьеров.',
-        priceBanner: 'Со встроенной подсветкой',
+        priceBanner: 'На средний и крупный опт цена договорная',
         specifications: {
           'Материал': 'Алюминиевый сплав АД31',
           'Высота профиля': '42,6 мм',
