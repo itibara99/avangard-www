@@ -8,6 +8,7 @@ import sten_3 from './ch/sten 3 ch.jpg';
 import razdelitel from './razdelitel.jpg';
 import razdelitel_ch from './ch/razdelitel ch.jpg';
 import reklamny from './reklamny.jpg';
+import oknadveri from '../assets/okna-dveri.jpg';
 import universal from './universal.jpg';
 import universal_ch from './ch/univers ch.jpg';
 import potoloch from './potoloch.jpg';
