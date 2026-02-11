@@ -46,6 +46,7 @@ import ventfasad from '../assets/ventfasad.jpg';
 import lodki from '../assets/lodki.jpg';
 import pool from '../assets/pool.jpg';
 import pergol from '../assets/pergol.jpg';
+import porogi from '../assets/porogi.jpg';
 import lestnici from '../assets/lestnici.jpg';
 import dush from '../assets/dush.jpg';
 import lift from '../assets/lift.jpg';
