@@ -36,7 +36,7 @@ import chert from '../assets/chert.jpg';
 import logo1 from '../assets/logo1.png';
 import dekor from '../assets/dekor.jpg';
 import reklamny from '../assets/reklamny.jpg';
-import oknadveri from '../assets/oknadveri.jpg';
+import oknadveri from '../assets/okna-dveri.jpg';
 import vent from '../assets/vent.jpg';
 import sun from '../assets/sun.jpg';
 import dorogi from '../assets/dorogi.jpg';
