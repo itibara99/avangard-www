@@ -68,7 +68,7 @@ const catalogImages = {
   konvektory: konvektory,
   dekorativny: dekor, // Замените на фактический путь
   konstrukcionny: konstrukt,
-  reklamny: potolkiProfile, // Замените на фактический путь
+  reklamny: reklamny, // Замените на фактический путь
   gryazezaschitny: gryaz, // Замените на фактический путь
   lameli: lameli, // Замените на фактический путь
   ventFasady: ventfasad, // Замените на фактический путь
