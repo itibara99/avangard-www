@@ -50,7 +50,6 @@ import porogi from '../assets/porogi.jpg';
 import lestnici from '../assets/lestnici.jpg';
 import dush from '../assets/dush.jpg';
 import lift from '../assets/lift.jpg';
-import porogi from '../assets/borti.jpg';
 import auto from '../assets/auto.jpg';
 import borti from '../assets/borti.jpg';
 import shkafi from '../assets/shkafi.jpg';
