@@ -690,7 +690,7 @@ function AvangardPage() {
                 <div className="flex flex-col sm:flex-row items-start space-y-4 sm:space-y-0 sm:space-x-6 mb-8">
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="h-5 w-5 text-sky-500" />
-                    <span className="text-gray-300">Сплав 6063</span>
+                    <span className="text-gray-300">Сплав АД31</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="h-5 w-5 text-sky-500" />
