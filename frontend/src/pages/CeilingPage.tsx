@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Header from '../components/ceiling/Header';
 import HeroSection from '../components/ceiling/HeroSection';
-// import AboutSection from '../components/ceiling/AboutSection';
+import CookieConsent from '../components/CookieConsent';
 import CatalogSection from '../components/ceiling/CatalogSection';
 import CategoryPage from '../components/ceiling/CategoryPage';
 import ProductPage from '../components/ceiling/ProductPage';
@@ -66,6 +66,7 @@ function App() {
   if (currentView === 'product') {
     return (
       <div className="min-h-screen bg-[#1A1A1A]">
+        <CookieConsent />
         <Header onNavigate={handleNavigateToHome} />
         <ProductPage
           productId={selectedProduct}
@@ -80,6 +81,7 @@ function App() {
   if (currentView === 'category') {
     return (
       <div className="min-h-screen bg-[#1A1A1A]">
+        <CookieConsent />
         <Header onNavigate={handleNavigateToHome} />
         <CategoryPage
           categoryId={selectedCategory}
@@ -96,6 +98,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-[#1A1A1A]">
+      <CookieConsent />
       <Header />
       <HeroSection />
       <section id="model-viewer" className="py-20 bg-[#1A1A1A]">

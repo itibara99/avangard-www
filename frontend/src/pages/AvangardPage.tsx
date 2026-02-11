@@ -24,6 +24,7 @@ import {
   CheckCircle,
 } from 'lucide-react';
 import AboutSection from '../components/avangard/AboutSection.tsx';
+import CookieConsent from '../components/CookieConsent';
 import potolkiBg from '../assets/ceiling.jpg';
 import potolkiProfile from '../assets/ceiling.jpg';
 import obshestroy from '../assets/obshestroy.jpg';
@@ -488,6 +489,7 @@ function AvangardPage() {
 
   return (
     <div className="min-h-screen bg-black text-white overflow-x-hidden">
+      <CookieConsent />
       {/* Animated Background */}
       <div className="fixed inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-blue-900"></div>

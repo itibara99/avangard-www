@@ -1,8 +1,24 @@
 const YANDEX_METRICA_ID = 106585621;
 const YANDEX_METRICA_ID_2 = 106605914;
 
+const hasConsent = (): boolean => {
+  try {
+    const consent = localStorage.getItem('cookie_consent');
+    if (!consent) return false;
+    const consentData = JSON.parse(consent);
+    return consentData.accepted === true;
+  } catch {
+    return false;
+  }
+};
+
 export const useYandexMetrica = () => {
   const trackGoal = (goalName: string, params?: Record<string, any>) => {
+    if (!hasConsent()) {
+      console.log('[Yandex Metrica] Tracking blocked - no consent');
+      return;
+    }
+
     if (typeof window !== 'undefined' && window.ym) {
       try {
         if (params) {
@@ -20,6 +36,11 @@ export const useYandexMetrica = () => {
   };
 
   const trackPageView = (url: string) => {
+    if (!hasConsent()) {
+      console.log('[Yandex Metrica] Tracking blocked - no consent');
+      return;
+    }
+
     if (typeof window !== 'undefined' && window.ym) {
       try {
         window.ym(YANDEX_METRICA_ID, 'hit', url);
@@ -34,6 +55,11 @@ export const useYandexMetrica = () => {
   };
 
   const setUserParams = (params: Record<string, any>) => {
+    if (!hasConsent()) {
+      console.log('[Yandex Metrica] Tracking blocked - no consent');
+      return;
+    }
+
     if (typeof window !== 'undefined' && window.ym) {
       try {
         window.ym(YANDEX_METRICA_ID, 'userParams', params);
@@ -46,6 +72,11 @@ export const useYandexMetrica = () => {
   };
 
   const notBounce = () => {
+    if (!hasConsent()) {
+      console.log('[Yandex Metrica] Tracking blocked - no consent');
+      return;
+    }
+
     if (typeof window !== 'undefined' && window.ym) {
       try {
         window.ym(YANDEX_METRICA_ID, 'notBounce');
