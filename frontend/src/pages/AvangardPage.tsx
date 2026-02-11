@@ -24,8 +24,8 @@ import {
   CheckCircle,
 } from 'lucide-react';
 import AboutSection from '../components/avangard/AboutSection.tsx';
-import potolkiBg from '../assets/potolki1.jpg';
-import potolkiProfile from '../assets/potolki1.jpg';
+import potolkiBg from '../assets/ceiling.jpg';
+import potolkiProfile from '../assets/ceiling.jpg';
 import obshestroy from '../assets/obshestroy.jpg';
 import konvektory from '../assets/konvektory.jpg';
 import konstrukt from '../assets/konstrukt.jpg';
