@@ -35,6 +35,7 @@ import lameli from '../assets/lameli.jpg';
 import chert from '../assets/chert.jpg';
 import logo1 from '../assets/logo1.png';
 import dekor from '../assets/dekor.jpg';
+import reklamny from '../assets/reklamny.jpg';
 import oknadveri from '../assets/oknadveri.jpg';
 import vent from '../assets/vent.jpg';
 import sun from '../assets/sun.jpg';
