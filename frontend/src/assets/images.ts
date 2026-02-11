@@ -25,6 +25,7 @@ import pk12 from './pk12.jpg';
 import pk12_ch from './ch/pk12 ch.jpg';
 import am1 from './AM1.jpg';
 import furnitures from './furnitures.jpg';
+import okna-dveri from './okna-dveri.jpg';
 import light_lines from './light-lines.jpg';
 import ceilingSlide from './ceiling.jpg';
 
