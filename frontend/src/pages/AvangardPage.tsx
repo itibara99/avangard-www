@@ -1192,7 +1192,7 @@ function AvangardPage() {
               {[
                 {
                   icon: MapPin,
-                  title: 'Адрес производства',
+                  title: 'Адрес офиса',
                   content: '193232, г. Санкт-петербург, переулок Челиева, 17',
                   color: 'from-sky-600 to-blue-700'
                 },
