@@ -52,27 +52,34 @@ function CookieConsent({ onConsentChange }: CookieConsentProps) {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 p-4 md:p-6 animate-slide-up">
+    <div className="fixed bottom-0 left-0 right-0 z-50 p-2 sm:p-4 md:p-6 animate-slide-up">
       <div className="max-w-6xl mx-auto bg-gradient-to-br from-gray-900/98 to-gray-800/98 backdrop-blur-xl border border-gray-700/50 rounded-2xl shadow-2xl">
-        <div className="p-6 md:p-8">
-          <div className="flex items-start space-x-4">
-            <div className="flex-shrink-0 p-3 bg-gradient-to-br from-sky-600/20 to-blue-700/20 rounded-xl">
-              <Cookie className="h-6 w-6 text-sky-400" />
+        <div className="p-3 sm:p-4 md:p-6 lg:p-8 max-h-[90vh] overflow-y-auto">
+          <div className="flex items-start space-x-2 sm:space-x-4">
+            <div className="hidden sm:flex flex-shrink-0 p-2 md:p-3 bg-gradient-to-br from-sky-600/20 to-blue-700/20 rounded-xl">
+              <Cookie className="h-5 w-5 md:h-6 md:w-6 text-sky-400" />
             </div>
 
-            <div className="flex-1 space-y-4">
+            <div className="flex-1 space-y-2 md:space-y-4">
               <div>
-                <h3 className="text-xl font-bold text-white mb-2">
+                <h3 className="text-lg md:text-xl font-bold text-white mb-1 md:mb-2">
                   Этот сайт использует файлы cookie
                 </h3>
-                <p className="text-gray-300 leading-relaxed">
+
+                {/* Короткая версия для мобильных */}
+                <p className="md:hidden text-sm text-gray-300 leading-relaxed">
+                  Мы используем cookie для улучшения работы сайта и анализа посещаемости.
+                </p>
+
+                {/* Полная версия для планшетов и ПК */}
+                <p className="hidden md:block text-gray-300 leading-relaxed">
                   Мы используем файлы cookie для улучшения работы сайта, анализа посещаемости и предоставления персонализированного контента.
                   Основные cookie необходимы для работы сайта, а аналитические помогают нам понять, как вы используете наш сайт,
                   чтобы улучшить его функциональность.
                 </p>
               </div>
 
-              <div className="flex flex-wrap gap-2 text-sm">
+              <div className="flex flex-wrap gap-2 text-xs sm:text-sm">
                 <a
                   href="/politika.pdf"
                   target="_blank"
@@ -88,20 +95,20 @@ function CookieConsent({ onConsentChange }: CookieConsentProps) {
                   rel="noopener noreferrer"
                   className="text-sky-400 hover:text-sky-300 underline transition-colors duration-300"
                 >
-                  Политика использования файлов cookie
+                  Политика cookie
                 </a>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-3 pt-2">
+              <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 pt-1 md:pt-2">
                 <button
                   onClick={() => handleConsent(true)}
-                  className="px-6 py-3 bg-gradient-to-r from-sky-600 to-blue-700 hover:from-sky-500 hover:to-blue-600 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105"
+                  className="px-4 py-2 sm:px-6 sm:py-3 bg-gradient-to-r from-sky-600 to-blue-700 hover:from-sky-500 hover:to-blue-600 text-white text-sm sm:text-base font-semibold rounded-xl transition-all duration-300 transform hover:scale-105"
                 >
                   Принять
                 </button>
                 <button
                   onClick={() => handleConsent(false)}
-                  className="px-6 py-3 bg-gray-700/50 hover:bg-gray-600/50 text-white font-semibold rounded-xl border border-gray-600/50 transition-all duration-300"
+                  className="px-4 py-2 sm:px-6 sm:py-3 bg-gray-700/50 hover:bg-gray-600/50 text-white text-sm sm:text-base font-semibold rounded-xl border border-gray-600/50 transition-all duration-300"
                 >
                   Отклонить
                 </button>
@@ -110,10 +117,10 @@ function CookieConsent({ onConsentChange }: CookieConsentProps) {
 
             <button
               onClick={() => handleConsent(false)}
-              className="flex-shrink-0 p-2 text-gray-400 hover:text-white hover:bg-gray-700/50 rounded-lg transition-all duration-300"
+              className="flex-shrink-0 p-1.5 sm:p-2 text-gray-400 hover:text-white hover:bg-gray-700/50 rounded-lg transition-all duration-300"
               aria-label="Закрыть"
             >
-              <X className="h-5 w-5" />
+              <X className="h-4 w-4 sm:h-5 sm:w-5" />
             </button>
           </div>
         </div>
