@@ -45,11 +45,11 @@ const ProductCard: React.FC<ProductCardProps> = ({
       onClick={() => onProductClick(id)}
     >
       {/* Product Image */}
-      <div className="relative h-48 overflow-hidden group/slider">
+      <div className="relative h-48 overflow-hidden group/slider bg-[#2A2A2A] flex items-center justify-center">
         <img
           src={images[currentImageIndex]}
           alt={name}
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+          className="w-full h-full object-contain object-center transition-transform duration-500 group-hover:scale-110"
         />
         
         {/* Navigation Arrows - only show if more than 1 image */}
