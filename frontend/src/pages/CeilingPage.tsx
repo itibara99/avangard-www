@@ -91,7 +91,7 @@ function App() {
   return (
     <div className="min-h-screen bg-[#1A1A1A]">
       <CookieConsent />
-      <Header />
+      <Header onNavigate={handleNavigateToHome} />
       <HeroSection />
       <section id="model-viewer" className="py-20 bg-[#1A1A1A]">
         <div className="container mx-auto px-4">
