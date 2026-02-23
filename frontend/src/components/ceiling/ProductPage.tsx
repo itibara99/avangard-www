@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowLeft, ShoppingCart } from 'lucide-react';
 import ModelViewer from './ModelViewer';
+import ImageCarousel from './ImageCarousel';
 
 import {
   bp40,
@@ -220,7 +221,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderCli
         images: [
           b2,
           b2_ch,
-
+          b2_zagl
         ],
         model3d: '/3d/b2.glb',
         price: '949 ₽/м',
@@ -468,6 +469,13 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderCli
             )}
           </div>
         </div>
+
+        {/* Image Carousel Section (only for B2) */}
+        {productId === 'b2' && (
+          <div className="mb-12">
+            <ImageCarousel images={product.images} productName={product.name} />
+          </div>
+        )}
 
         {/* Bottom Section: Price, Description, Specifications */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
