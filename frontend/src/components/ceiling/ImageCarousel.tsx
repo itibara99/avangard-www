@@ -68,7 +68,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, productName }) =>
               <>
                 <button
                   onClick={goToPrevious}
-                  className="absolute left-2 top-1/2 -translate-y-1/2 bg-gray-900/80 hover:bg-gray-800 text-gray-900 p-2 rounded-full transition-all duration-200"
+                  className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all duration-200"
                   title="Предыдущее изображение"
                 >
                   <ChevronLeft size={24} />
@@ -76,7 +76,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, productName }) =>
 
                 <button
                   onClick={goToNext}
-                  className="absolute right-2 top-1/2 -translate-y-1/2 bg-gray-900/80 hover:bg-gray-800 text-gray-900 p-2 rounded-full transition-all duration-200"
+                  className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all duration-200"
                   title="Следующее изображение"
                 >
                   <ChevronRight size={24} />
