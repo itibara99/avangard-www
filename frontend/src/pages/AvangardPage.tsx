@@ -25,79 +25,17 @@ import {
 } from 'lucide-react';
 import AboutSection from '../components/avangard/AboutSection.tsx';
 import CookieConsent from '../components/CookieConsent';
-import potolkiBg from '../assets/ceiling.jpg';
-import potolkiProfile from '../assets/ceiling.jpg';
-import obshestroy from '../assets/obshestroy.jpg';
-import konvektory from '../assets/konvektory.jpg';
-import konstrukt from '../assets/konstrukt.jpg';
-import gryaz from '../assets/gryaz.jpg';
-import lameli from '../assets/lameli.jpg';
-import chert from '../assets/chert.jpg';
-import logo1 from '../assets/logo1.png';
-import dekor from '../assets/dekor.jpg';
-import reklamny from '../assets/reklamny.jpg';
-import oknadveri from '../assets/okna-dveri.jpg';
-import vent from '../assets/vent.jpg';
-import sun from '../assets/sun.jpg';
-import dorogi from '../assets/dorogi.jpg';
-import santeh from '../assets/santeh.jpg';
-import fasad from '../assets/fasad.jpg';
-import ventfasad from '../assets/ventfasad.jpg';
-import lodki from '../assets/lodki.jpg';
+import { b2 as potolkiBg, bp40 as potolkiProfile } from '@/assets/images';
 import pool from '../assets/pool.jpg';
-import pergol from '../assets/pergol.jpg';
-import porogi from '../assets/porogi.jpg';
-import lestnici from '../assets/lestnici.jpg';
 import dush from '../assets/dush.jpg';
-import lift from '../assets/lift.jpg';
-import auto from '../assets/auto.jpg';
-import borti from '../assets/borti.jpg';
-import shkafi from '../assets/shkafi.jpg';
-import teplici from '../assets/teplici.jpg';
-import electro from '../assets/electro.jpg';
-import radiator from '../assets/radiator.jpg';
-import moskit from '../assets/moskit.jpg';
-import zhaluzi from '../assets/zhaluzi.jpg';
 
 import {YMaps, Map, Placemark} from '@pbe/react-yandex-maps';
 
 // Импорты изображений для каталога (замените на фактические пути к вашим изображениям)
 const catalogImages = {
-  chert: chert, // Замените на фактический путь
-  potolki: potolkiProfile, // Используем существующее изображение как пример
-  obschestroitelny: obshestroy,
-  konvektory: konvektory,
-  dekorativny: dekor, // Замените на фактический путь
-  konstrukcionny: konstrukt,
-  reklamny: reklamny, // Замените на фактический путь
-  gryazezaschitny: gryaz, // Замените на фактический путь
-  lameli: lameli, // Замените на фактический путь
-  ventFasady: ventfasad, // Замените на фактический путь
-  oknadveri: oknadveri,
-  vent: vent,
-  sun: sun,
-  stanki: konstrukt,
-  dorogi: dorogi,
-  santeh: santeh,
-  fasad: fasad,
-  fasadstoyki: fasad,
-  ventfasad: ventfasad,
-  lodki: lodki,
   pool: pool,
-  pergol: pergol,
-  lestnici: lestnici,
   dush: dush,
-  lift: lift,
-  porogi: porogi,
-  auto: auto,
-  borti: borti,
- // torgovo: torgovo,
-  shkafi: shkafi,
-  zhaluzi: zhaluzi,
-  teplici: teplici,
-  electro: electro,
-  radiator: radiator,
-  moskit: moskit,
+  potolki: potolkiProfile,
 };
 
 function AvangardPage() {

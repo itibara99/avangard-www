@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { ArrowLeft, ShoppingCart } from 'lucide-react';
 import ModelViewer from './ModelViewer';
 import ImageCarousel from './ImageCarousel';
+import { getCategorySlug } from '@/utils/slugs';
 
 import {
   bp40,
@@ -47,11 +49,12 @@ interface Product {
 
 interface ProductPageProps {
   productId: string;
-  onBack: () => void;
+  categoryId: string;
   onOrderClick: () => void;
 }
 
-const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderClick }) => {
+const ProductPage: React.FC<ProductPageProps> = ({ productId, categoryId, onOrderClick }) => {
+  const navigate = useNavigate();
   const getProductData = (id: string): Product => {
     const baseProduct = {
       id,
@@ -423,12 +426,28 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderCli
 
   const product = getProductData(productId);
 
+  const categoryTitles: Record<string, string> = {
+    standard: 'Стандартные профили',
+    cornices: 'Карнизы',
+    contour: 'Комплектующие'
+  };
+
+  useEffect(() => {
+    const productName = product.name;
+    const categoryTitle = categoryTitles[categoryId] || 'Продукция';
+    document.title = `${productName} - ${categoryTitle} | Авангард Потолки`;
+
+    return () => {
+      document.title = 'Авангард Потолки - Производство алюминиевых профилей';
+    };
+  }, [productId, categoryId, product.name]);
+
   return (
     <div className="min-h-screen bg-[#1A1A1A] pt-16">
       <div className="container mx-auto px-6 md:px-8 lg:px-12 py-8">
         {/* Back Button */}
         <button
-          onClick={onBack}
+          onClick={() => navigate(`/ceiling/catalog/${getCategorySlug(categoryId)}`)}
           className="flex items-center space-x-2 text-gray-400 hover:text-yellow-400 transition-colors mb-8"
         >
           <ArrowLeft size={20} />

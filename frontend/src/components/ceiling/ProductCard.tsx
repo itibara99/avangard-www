@@ -1,5 +1,7 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { ShoppingCart, Star, ChevronLeft, ChevronRight } from 'lucide-react';
+import { getCategorySlug, getProductSlug } from '@/utils/slugs';
 
 interface ProductCardProps {
   id: string;
@@ -8,7 +10,7 @@ interface ProductCardProps {
   price: string;
   description: string;
   inStock: boolean;
-  onProductClick: (productId: string) => void;
+  categoryId: string;
   onOrderClick: () => void;
 }
 
@@ -19,9 +21,10 @@ const ProductCard: React.FC<ProductCardProps> = ({
   price,
   description,
   inStock,
-  onProductClick,
+  categoryId,
   onOrderClick
 }) => {
+  const navigate = useNavigate();
   const [currentImageIndex, setCurrentImageIndex] = React.useState(0);
 
   const nextSlide = (e: React.MouseEvent) => {
@@ -40,9 +43,9 @@ const ProductCard: React.FC<ProductCardProps> = ({
   };
 
   return (
-    <div 
+    <div
       className="bg-[#3A3A3A] rounded-lg overflow-hidden hover:scale-105 transition-all duration-300 hover:shadow-xl group border border-gray-700 hover:border-yellow-400/50 cursor-pointer"
-      onClick={() => onProductClick(id)}
+      onClick={() => navigate(`/ceiling/catalog/${getCategorySlug(categoryId)}/${getProductSlug(id)}`)}
     >
       {/* Product Image */}
       <div className="relative h-48 overflow-hidden group/slider bg-[#2A2A2A] flex items-center justify-center">

@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { ArrowLeft, Grid, List } from 'lucide-react';
 import ProductCard from './ProductCard';
+import { getCategorySlug } from '@/utils/slugs';
 
 import {bp40, bp40_ch, stenvoy, sten_1, sten_2, sten_3, razdelitel,
   razdelitel_ch, universal, universal_ch, potoloch, potoloch_ch,
@@ -20,23 +22,17 @@ interface Product {
 interface CategoryPageProps {
   categoryId: string;
   categoryTitle: string;
-  onBack: () => void;
-  onCategoryChange: (categoryId: string) => void;
-  onProductClick: (productId: string) => void;
   onOrderClick: () => void;
 }
 
 const CategoryPage: React.FC<CategoryPageProps> = ({
   categoryId,
   categoryTitle,
-  onBack,
-  onCategoryChange,
-  onProductClick,
   onOrderClick
 }) => {
+  const navigate = useNavigate();
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
 
-  // Scroll to top when component mounts
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -360,18 +356,18 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
               <div className="flex items-center justify-between mb-6">
                 <h3 className="text-white font-semibold text-lg">Категории</h3>
                 <button
-                  onClick={onBack}
+                  onClick={() => navigate('/ceiling')}
                   className="text-gray-400 hover:text-yellow-400 transition-colors"
                 >
                   <ArrowLeft size={20} />
                 </button>
               </div>
-              
+
               <nav className="space-y-2">
                 {categories.map((category) => (
                   <button
                     key={category.id}
-                    onClick={() => onCategoryChange(category.id)}
+                    onClick={() => navigate(`/ceiling/catalog/${getCategorySlug(category.id)}`)}
                     className={`w-full text-left px-4 py-3 rounded-lg transition-all duration-200 flex items-center justify-between group ${
                       categoryId === category.id
                         ? 'bg-yellow-400 text-black font-medium'
@@ -429,15 +425,15 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
 
             {/* Products Grid */}
             <div className={`grid gap-6 ${
-              viewMode === 'grid' 
-                ? 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4' 
+              viewMode === 'grid'
+                ? 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'
                 : 'grid-cols-1'
             }`}>
               {products.map((product) => (
                 <ProductCard
                   key={product.id}
                   {...product}
-                  onProductClick={onProductClick}
+                  categoryId={categoryId}
                   onOrderClick={onOrderClick}
                 />
               ))}

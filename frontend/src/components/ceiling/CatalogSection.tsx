@@ -1,12 +1,11 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Home, Frame, Layers, ArrowRight } from 'lucide-react';
 import { bp40, cornices, furnitures } from '@/assets/images';
+import { getCategorySlug } from '@/utils/slugs';
 
-interface CatalogSectionProps {
-  onCategoryClick: (categoryId: string) => void;
-}
-
-const CatalogSection: React.FC<CatalogSectionProps> = ({ onCategoryClick }) => {
+const CatalogSection: React.FC = () => {
+  const navigate = useNavigate();
   const categories = [
     {
       id: 'standard',
@@ -73,7 +72,7 @@ const CatalogSection: React.FC<CatalogSectionProps> = ({ onCategoryClick }) => {
                 <div
                   key={category.id}
                   className="group relative bg-[#3A3A3A] rounded-lg overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl cursor-pointer h-full"
-                  onClick={() => onCategoryClick(category.id)}
+                  onClick={() => navigate(`/ceiling/catalog/${getCategorySlug(category.id)}`)}
                 >
                   {/* Background Image */}
                   <div className="relative h-full overflow-hidden">
@@ -121,7 +120,7 @@ const CatalogSection: React.FC<CatalogSectionProps> = ({ onCategoryClick }) => {
               return (
                 <div
                   className="group relative bg-[#3A3A3A] rounded-lg overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl h-full cursor-pointer"
-                  onClick={() => onCategoryClick(category.id)}
+                  onClick={() => navigate(`/ceiling/catalog/${getCategorySlug(category.id)}`)}
                 >
                   {/* Background Image */}
                   <div className="relative h-full overflow-hidden">
