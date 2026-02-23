@@ -136,7 +136,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, productName }) =>
               <>
                 <button
                   onClick={lightboxPrevious}
-                  className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-all duration-200"
+                  className="absolute left-4 top-1/2 -translate-y-1/2 bg-gray-800/80 hover:bg-gray-700/90 text-gray-900 p-3 rounded-full transition-all duration-200"
                   title="Предыдущее изображение"
                 >
                   <ChevronLeft size={32} />
@@ -144,7 +144,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, productName }) =>
 
                 <button
                   onClick={lightboxNext}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-all duration-200"
+                  className="absolute right-4 top-1/2 -translate-y-1/2 bg-gray-800/80 hover:bg-gray-700/90 text-gray-900 p-3 rounded-full transition-all duration-200"
                   title="Следующее изображение"
                 >
                   <ChevronRight size={32} />
