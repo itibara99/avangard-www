@@ -13,6 +13,8 @@ createRoot(document.getElementById('root')!).render(
             <Routes>
                 <Route path="/" element={<AvangardPage />} />
                 <Route path="/ceiling" element={<CeilingPage />} />
+                <Route path="/ceiling/:category" element={<CeilingPage />} />
+                <Route path="/ceiling/:category/:product" element={<CeilingPage />} />
             </Routes>
         </BrowserRouter>
     </StrictMode>
