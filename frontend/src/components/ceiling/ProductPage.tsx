@@ -426,6 +426,13 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, categoryId, onOrde
 
   const product = getProductData(productId);
 
+  console.log('ProductPage Debug:', {
+    productId,
+    categoryId,
+    product,
+    hasName: !!product?.name
+  });
+
   const categoryTitles: Record<string, string> = {
     standard: 'Стандартные профили',
     cornices: 'Карнизы',
@@ -433,6 +440,11 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, categoryId, onOrde
   };
 
   useEffect(() => {
+    if (!product || !product.name) {
+      console.error('Product not found:', productId);
+      return;
+    }
+
     const productName = product.name;
     const categoryTitle = categoryTitles[categoryId] || 'Продукция';
     document.title = `${productName} - ${categoryTitle} | Авангард Потолки`;
@@ -440,7 +452,25 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, categoryId, onOrde
     return () => {
       document.title = 'Авангард Потолки - Производство алюминиевых профилей';
     };
-  }, [productId, categoryId, product.name]);
+  }, [productId, categoryId, product?.name]);
+
+  // If product not found, show error message instead of crashing
+  if (!product || !product.name) {
+    return (
+      <div className="min-h-screen bg-[#1A1A1A] pt-16 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-4">Продукт не найден</h1>
+          <p className="text-gray-400 mb-8">К сожалению, продукт с ID "{productId}" не существует</p>
+          <button
+            onClick={() => navigate(`/ceiling/catalog/${getCategorySlug(categoryId)}`)}
+            className="bg-yellow-400 hover:bg-yellow-500 text-black px-6 py-3 rounded-lg font-medium transition-all"
+          >
+            Вернуться к каталогу
+          </button>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-[#1A1A1A] pt-16">

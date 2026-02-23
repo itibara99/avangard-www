@@ -20,6 +20,13 @@ function App() {
   const categoryId = categorySlug ? getCategoryId(categorySlug) : null;
   const productId = productSlug ? getProductId(productSlug) : null;
 
+  console.log('CeilingPage Debug:', {
+    categorySlug,
+    productSlug,
+    categoryId,
+    productId
+  });
+
   const categoryTitles = {
     standard: 'Стандартные профили',
     cornices: 'Карнизы',
@@ -27,11 +34,21 @@ function App() {
   };
 
   useEffect(() => {
+    // Only redirect if we have a slug but no valid ID
     if (categorySlug && !categoryId) {
-      navigate('/ceiling');
+      console.warn('Invalid category slug:', categorySlug);
+      navigate('/ceiling', { replace: true });
+      return;
     }
     if (productSlug && !productId) {
-      navigate('/ceiling');
+      console.warn('Invalid product slug:', productSlug);
+      // Redirect to category page if we have valid category
+      if (categoryId) {
+        navigate(`/ceiling/catalog/${categorySlug}`, { replace: true });
+      } else {
+        navigate('/ceiling', { replace: true });
+      }
+      return;
     }
 
     if (categoryId && !productId) {
