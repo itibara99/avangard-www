@@ -55,20 +55,7 @@ interface ProductPageProps {
 
 const ProductPage: React.FC<ProductPageProps> = ({ productId, categoryId, onOrderClick }) => {
   const navigate = useNavigate();
-  const getProductData = (id: string): Product => {
-    const baseProduct = {
-      id,
-      images: [
-        bp40,
-        cornices,
-        pk12
-      ],
-      model3d: undefined, // No default model available
-      inStock: true,
-      specifications: {},
-      fullDescription: ''
-    };
-
+  const getProductData = (id: string): Product | null => {
     const products: { [key: string]: Partial<Product> } = {
       'std-1': {
         name: 'Брус 40х40',
@@ -421,17 +408,27 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, categoryId, onOrde
       }
     };
 
-    return { ...baseProduct, ...products[id] } as Product;
+    // Return null if product doesn't exist
+    if (!products[id] || !products[id].name) {
+      return null;
+    }
+
+    // Create complete product object
+    return {
+      id,
+      images: products[id].images || [bp40, cornices, pk12],
+      model3d: products[id].model3d,
+      inStock: true,
+      specifications: products[id].specifications || {},
+      fullDescription: products[id].fullDescription || '',
+      name: products[id].name!,
+      price: products[id].price,
+      description: products[id].description,
+      priceBanner: products[id].priceBanner
+    } as Product;
   };
 
   const product = getProductData(productId);
-
-  console.log('ProductPage Debug:', {
-    productId,
-    categoryId,
-    product,
-    hasName: !!product?.name
-  });
 
   const categoryTitles: Record<string, string> = {
     standard: 'Стандартные профили',
@@ -440,19 +437,11 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, categoryId, onOrde
   };
 
   useEffect(() => {
-    if (!product || !product.name) {
-      console.error('Product not found:', productId);
-      return;
+    if (product && product.name) {
+      const categoryTitle = categoryTitles[categoryId] || 'Продукция';
+      document.title = `${product.name} - ${categoryTitle} | Авангард Потолки`;
     }
-
-    const productName = product.name;
-    const categoryTitle = categoryTitles[categoryId] || 'Продукция';
-    document.title = `${productName} - ${categoryTitle} | Авангард Потолки`;
-
-    return () => {
-      document.title = 'Авангард Потолки - Производство алюминиевых профилей';
-    };
-  }, [productId, categoryId, product?.name]);
+  }, [productId, categoryId, product]);
 
   // If product not found, show error message instead of crashing
   if (!product || !product.name) {

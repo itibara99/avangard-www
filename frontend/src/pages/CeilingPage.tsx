@@ -20,13 +20,6 @@ function App() {
   const categoryId = categorySlug ? getCategoryId(categorySlug) : null;
   const productId = productSlug ? getProductId(productSlug) : null;
 
-  console.log('CeilingPage Debug:', {
-    categorySlug,
-    productSlug,
-    categoryId,
-    productId
-  });
-
   const categoryTitles = {
     standard: 'Стандартные профили',
     cornices: 'Карнизы',
@@ -34,33 +27,12 @@ function App() {
   };
 
   useEffect(() => {
-    // Only redirect if we have a slug but no valid ID
-    if (categorySlug && !categoryId) {
-      console.warn('Invalid category slug:', categorySlug);
-      navigate('/ceiling', { replace: true });
-      return;
-    }
-    if (productSlug && !productId) {
-      console.warn('Invalid product slug:', productSlug);
-      // Redirect to category page if we have valid category
-      if (categoryId) {
-        navigate(`/ceiling/catalog/${categorySlug}`, { replace: true });
-      } else {
-        navigate('/ceiling', { replace: true });
-      }
-      return;
-    }
-
     if (categoryId && !productId) {
       document.title = `${categoryTitles[categoryId as keyof typeof categoryTitles]} | Авангард Потолки`;
     } else if (!categoryId && !productId) {
       document.title = 'Авангард Потолки - Производство алюминиевых профилей';
     }
-
-    return () => {
-      document.title = 'Авангард Потолки - Производство алюминиевых профилей';
-    };
-  }, [categorySlug, productSlug, categoryId, productId, navigate]);
+  }, [categoryId, productId]);
 
   const handleNavigateToHome = (section: string) => {
     navigate('/ceiling');
