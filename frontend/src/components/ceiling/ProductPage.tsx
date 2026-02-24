@@ -1,9 +1,7 @@
-import React, { useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React from 'react';
 import { ArrowLeft, ShoppingCart } from 'lucide-react';
 import ModelViewer from './ModelViewer';
 import ImageCarousel from './ImageCarousel';
-import { getCategorySlug } from '@/utils/slugs';
 
 import {
   bp40,
@@ -49,13 +47,25 @@ interface Product {
 
 interface ProductPageProps {
   productId: string;
-  categoryId: string;
+  onBack: () => void;
   onOrderClick: () => void;
 }
 
-const ProductPage: React.FC<ProductPageProps> = ({ productId, categoryId, onOrderClick }) => {
-  const navigate = useNavigate();
-  const getProductData = (id: string): Product | null => {
+const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderClick }) => {
+  const getProductData = (id: string): Product => {
+    const baseProduct = {
+      id,
+      images: [
+        bp40,
+        cornices,
+        pk12
+      ],
+      model3d: undefined, // No default model available
+      inStock: true,
+      specifications: {},
+      fullDescription: ''
+    };
+
     const products: { [key: string]: Partial<Product> } = {
       'std-1': {
         name: 'Брус 40х40',
@@ -408,65 +418,17 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, categoryId, onOrde
       }
     };
 
-    // Return null if product doesn't exist
-    if (!products[id] || !products[id].name) {
-      return null;
-    }
-
-    // Create complete product object
-    return {
-      id,
-      images: products[id].images || [bp40, cornices, pk12],
-      model3d: products[id].model3d,
-      inStock: true,
-      specifications: products[id].specifications || {},
-      fullDescription: products[id].fullDescription || '',
-      name: products[id].name!,
-      price: products[id].price,
-      description: products[id].description,
-      priceBanner: products[id].priceBanner
-    } as Product;
+    return { ...baseProduct, ...products[id] } as Product;
   };
 
   const product = getProductData(productId);
-
-  const categoryTitles: Record<string, string> = {
-    standard: 'Стандартные профили',
-    cornices: 'Карнизы',
-    contour: 'Комплектующие'
-  };
-
-  useEffect(() => {
-    if (product && product.name) {
-      const categoryTitle = categoryTitles[categoryId] || 'Продукция';
-      document.title = `${product.name} - ${categoryTitle} | Авангард Потолки`;
-    }
-  }, [productId, categoryId, product]);
-
-  // If product not found, show error message instead of crashing
-  if (!product || !product.name) {
-    return (
-      <div className="min-h-screen bg-[#1A1A1A] pt-16 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-4">Продукт не найден</h1>
-          <p className="text-gray-400 mb-8">К сожалению, продукт с ID "{productId}" не существует</p>
-          <button
-            onClick={() => navigate(`/ceiling/catalog/${getCategorySlug(categoryId)}`)}
-            className="bg-yellow-400 hover:bg-yellow-500 text-black px-6 py-3 rounded-lg font-medium transition-all"
-          >
-            Вернуться к каталогу
-          </button>
-        </div>
-      </div>
-    );
-  }
 
   return (
     <div className="min-h-screen bg-[#1A1A1A] pt-16">
       <div className="container mx-auto px-6 md:px-8 lg:px-12 py-8">
         {/* Back Button */}
         <button
-          onClick={() => navigate(`/ceiling/catalog/${getCategorySlug(categoryId)}`)}
+          onClick={onBack}
           className="flex items-center space-x-2 text-gray-400 hover:text-yellow-400 transition-colors mb-8"
         >
           <ArrowLeft size={20} />

@@ -1,5 +1,4 @@
-import { useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 import Header from '../components/ceiling/Header';
 import HeroSection from '../components/ceiling/HeroSection';
 import CookieConsent from '../components/CookieConsent';
@@ -11,32 +10,49 @@ import ContactSection from '../components/ceiling/ContactSection';
 import Footer from '../components/ceiling/Footer';
 import ModelViewer from '../components/ceiling/ModelViewer';
 import {b2} from "../assets/images.ts";
-import { getCategoryId, getProductId } from '../utils/slugs';
 
 function App() {
-  const { category: categorySlug, product: productSlug } = useParams<{ category?: string; product?: string }>();
-  const navigate = useNavigate();
-
-  const categoryId = categorySlug ? getCategoryId(categorySlug) : null;
-  const productId = productSlug ? getProductId(productSlug) : null;
+  const [currentView, setCurrentView] = useState<'home' | 'category' | 'product'>('home');
+  const [selectedCategory, setSelectedCategory] = useState<string>('');
+  const [selectedProduct, setSelectedProduct] = useState<string>('');
 
   const categoryTitles = {
     standard: 'Стандартные профили',
     cornices: 'Карнизы',
+   // light: 'Световые линии',
     contour: 'Комплектующие'
   };
 
-  useEffect(() => {
-    if (categoryId && !productId) {
-      document.title = `${categoryTitles[categoryId as keyof typeof categoryTitles]} | Авангард Потолки`;
-    } else if (!categoryId && !productId) {
-      document.title = 'Авангард Потолки - Производство алюминиевых профилей';
-    }
-  }, [categoryId, productId]);
+  const handleCategoryClick = (categoryId: string) => {
+    setSelectedCategory(categoryId);
+    setCurrentView('category');
+  };
+
+  const handleBackToHome = () => {
+    setCurrentView('home');
+    setSelectedCategory('');
+  };
+
+  const handleCategoryChange = (categoryId: string) => {
+    setSelectedCategory(categoryId);
+  };
+
+  const handleProductClick = (productId: string) => {
+    setSelectedProduct(productId);
+    setCurrentView('product');
+  };
+
+  const handleBackFromProduct = () => {
+    setCurrentView('category');
+    setSelectedProduct('');
+  };
 
   const handleNavigateToHome = (section: string) => {
-    navigate('/ceiling');
-
+    setCurrentView('home');
+    setSelectedCategory('');
+    setSelectedProduct('');
+    
+    // Small delay to ensure DOM is updated
     setTimeout(() => {
       const element = document.getElementById(section);
       element?.scrollIntoView({ behavior: 'smooth' });
@@ -47,14 +63,14 @@ function App() {
     handleNavigateToHome('contact-form');
   };
 
-  if (productId && categoryId) {
+  if (currentView === 'product') {
     return (
       <div className="min-h-screen bg-[#1A1A1A]">
         <CookieConsent />
         <Header onNavigate={handleNavigateToHome} />
         <ProductPage
-          productId={productId}
-          categoryId={categoryId}
+          productId={selectedProduct}
+          onBack={handleBackFromProduct}
           onOrderClick={handleOrderClick}
         />
         <Footer />
@@ -62,14 +78,17 @@ function App() {
     );
   }
 
-  if (categoryId) {
+  if (currentView === 'category') {
     return (
       <div className="min-h-screen bg-[#1A1A1A]">
         <CookieConsent />
         <Header onNavigate={handleNavigateToHome} />
         <CategoryPage
-          categoryId={categoryId}
-          categoryTitle={categoryTitles[categoryId as keyof typeof categoryTitles]}
+          categoryId={selectedCategory}
+          categoryTitle={categoryTitles[selectedCategory as keyof typeof categoryTitles]}
+          onBack={handleBackToHome}
+          onCategoryChange={handleCategoryChange}
+          onProductClick={handleProductClick}
           onOrderClick={handleOrderClick}
         />
         <Footer />
@@ -80,7 +99,7 @@ function App() {
   return (
     <div className="min-h-screen bg-[#1A1A1A]">
       <CookieConsent />
-      <Header onNavigate={handleNavigateToHome} />
+      <Header />
       <HeroSection />
       <section id="model-viewer" className="py-20 bg-[#1A1A1A]">
         <div className="container mx-auto px-4">
@@ -116,7 +135,7 @@ function App() {
                           Универсальный карниз для скрытой ниши под шторы
                         </p>
                         <button
-                          onClick={() => navigate('/ceiling/catalog/karnizy/karniz-b2-pro')}
+                          onClick={() => handleProductClick('b2')}
                           className="w-full bg-yellow-400 hover:bg-yellow-500 text-black font-semibold py-2 px-4 rounded-lg transition-all duration-300 transform hover:scale-105"
                         >
                           Перейти
@@ -199,7 +218,7 @@ function App() {
           </div>
         </div>
       </section>
-      <CatalogSection />
+      <CatalogSection onCategoryClick={handleCategoryClick} />
       <ContactForm />
       <ContactSection />
       <Footer />
