@@ -944,7 +944,7 @@ function AvangardPage() {
                       <option value="radiators">Радиаторы алюминиевые - {scrapPrices.radiators} ₽/кг</option>
                       <option value="cans">Банки алюминиевые - {scrapPrices.cans} ₽/кг</option>
                       <option value="food">Пищевой алюминий - {scrapPrices.food} ₽/кг</option>
-                      <option value="mix">Смесь - {scrapPrices.mix} ₽/кг</option>
+                      <option value="mix">Микс - {scrapPrices.mix} ₽/кг</option>
                       <option value="amg">Производственные отходы - {scrapPrices.amg} ₽/кг</option>
                       <option value="disks">Диски - {scrapPrices.disks} ₽/кг</option>
                       <option value="electrotech">Электротехнический алюминий - {scrapPrices.electrotech} ₽/кг</option>
