@@ -5,6 +5,7 @@ import stenvoy from './stenovoy.jpg';
 import sten_1 from './ch/sten 1 ch.jpg';
 import sten_2 from './ch/sten 2 ch.jpg';
 import sten_3 from './ch/sten 3 ch.jpg';
+import sun from './solnechnie.jpg';
 import razdelitel from './razdelitel.jpg';
 import razdelitel_ch from './ch/razdelitel ch.jpg';
 import reklamny from './reklamny.jpg';
@@ -32,7 +33,7 @@ import ceilingSlide from './ceiling.jpg';
 
 export {
     bp40, bp40_ch, stenvoy, sten_1, sten_2, sten_3, razdelitel,
-    razdelitel_ch, reklamny, oknadveri, porogi, universal, universal_ch, potoloch, potoloch_ch,
+    razdelitel_ch, reklamny, oknadveri, porogi, sun, universal, universal_ch, potoloch, potoloch_ch,
     z, z_ch, b2, b2_ch, b2_zagl, pk14_ch, cornices, pk15, pk15_ch, pk12, pk12_ch,
     am1, furnitures, logo, light_lines, ceilingSlide
 }
