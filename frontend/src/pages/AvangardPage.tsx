@@ -38,7 +38,7 @@ import dekor from '../assets/dekor.jpg';
 import reklamny from '../assets/reklamny.jpg';
 import oknadveri from '../assets/okna-dveri.jpg';
 import vent from '../assets/vent.jpg';
-import sun from '../assets/sun.jpg';
+import sun from '../assets/solnechnie.jpg';
 import dorogi from '../assets/dorogi.jpg';
 import santeh from '../assets/santeh.jpg';
 import fasad from '../assets/fasad.jpg';
