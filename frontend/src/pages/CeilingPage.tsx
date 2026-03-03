@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useEffect } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
 import Header from '../components/ceiling/Header';
 import HeroSection from '../components/ceiling/HeroSection';
 import CookieConsent from '../components/CookieConsent';
@@ -10,49 +11,76 @@ import ContactSection from '../components/ceiling/ContactSection';
 import Footer from '../components/ceiling/Footer';
 import ModelViewer from '../components/ceiling/ModelViewer';
 import {b2} from "../assets/images.ts";
+import { getCategoryForProduct, categoryTitles, isValidCategory, isValidProduct } from '../utils/productCategories';
 
 function App() {
-  const [currentView, setCurrentView] = useState<'home' | 'category' | 'product'>('home');
-  const [selectedCategory, setSelectedCategory] = useState<string>('');
-  const [selectedProduct, setSelectedProduct] = useState<string>('');
+  const { category, product } = useParams<{ category?: string; product?: string }>();
+  const navigate = useNavigate();
 
-  const categoryTitles = {
-    standard: 'Стандартные профили',
-    cornices: 'Карнизы',
-   // light: 'Световые линии',
-    contour: 'Комплектующие'
-  };
+  useEffect(() => {
+    if (product && !isValidProduct(product)) {
+      navigate('/ceiling', { replace: true });
+      return;
+    }
+
+    if (product && category) {
+      const expectedCategory = getCategoryForProduct(product);
+      if (expectedCategory && expectedCategory !== category) {
+        navigate(`/ceiling/${expectedCategory}/${product}`, { replace: true });
+        return;
+      }
+    }
+
+    if (category && !product && !isValidCategory(category)) {
+      navigate('/ceiling', { replace: true });
+    }
+  }, [category, product, navigate]);
+
+  useEffect(() => {
+    const titles: Record<string, string> = {
+      home: 'Алюминиевые профили для натяжных потолков | Авангард',
+      ...categoryTitles
+    };
+
+    if (product) {
+      document.title = `${product.toUpperCase()} | Авангард`;
+    } else if (category && categoryTitles[category]) {
+      document.title = `${categoryTitles[category]} | Авангард`;
+    } else {
+      document.title = titles.home;
+    }
+  }, [category, product]);
 
   const handleCategoryClick = (categoryId: string) => {
-    setSelectedCategory(categoryId);
-    setCurrentView('category');
+    navigate(`/ceiling/${categoryId}`);
   };
 
   const handleBackToHome = () => {
-    setCurrentView('home');
-    setSelectedCategory('');
+    navigate('/ceiling');
   };
 
   const handleCategoryChange = (categoryId: string) => {
-    setSelectedCategory(categoryId);
+    navigate(`/ceiling/${categoryId}`);
   };
 
   const handleProductClick = (productId: string) => {
-    setSelectedProduct(productId);
-    setCurrentView('product');
+    const categoryId = getCategoryForProduct(productId);
+    if (categoryId) {
+      navigate(`/ceiling/${categoryId}/${productId}`);
+    }
   };
 
   const handleBackFromProduct = () => {
-    setCurrentView('category');
-    setSelectedProduct('');
+    if (category) {
+      navigate(`/ceiling/${category}`);
+    } else {
+      navigate('/ceiling');
+    }
   };
 
   const handleNavigateToHome = (section: string) => {
-    setCurrentView('home');
-    setSelectedCategory('');
-    setSelectedProduct('');
-    
-    // Small delay to ensure DOM is updated
+    navigate('/ceiling');
+
     setTimeout(() => {
       const element = document.getElementById(section);
       element?.scrollIntoView({ behavior: 'smooth' });
@@ -63,13 +91,13 @@ function App() {
     handleNavigateToHome('contact-form');
   };
 
-  if (currentView === 'product') {
+  if (product) {
     return (
       <div className="min-h-screen bg-[#1A1A1A]">
         <CookieConsent />
         <Header onNavigate={handleNavigateToHome} />
         <ProductPage
-          productId={selectedProduct}
+          productId={product}
           onBack={handleBackFromProduct}
           onOrderClick={handleOrderClick}
         />
@@ -78,14 +106,14 @@ function App() {
     );
   }
 
-  if (currentView === 'category') {
+  if (category) {
     return (
       <div className="min-h-screen bg-[#1A1A1A]">
         <CookieConsent />
         <Header onNavigate={handleNavigateToHome} />
         <CategoryPage
-          categoryId={selectedCategory}
-          categoryTitle={categoryTitles[selectedCategory as keyof typeof categoryTitles]}
+          categoryId={category}
+          categoryTitle={categoryTitles[category as keyof typeof categoryTitles]}
           onBack={handleBackToHome}
           onCategoryChange={handleCategoryChange}
           onProductClick={handleProductClick}
