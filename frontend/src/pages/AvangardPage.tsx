@@ -989,7 +989,7 @@ function AvangardPage() {
                     </div>
                   </div>
                   
-                  <div className="text-xs text-gray-500 text-center">
+                  <div className="text-xs text-white font-bold text-center">
                     * Цены указаны ориентировочно и могут изменяться в зависимости от качества лома и рыночных условий
                   </div>
                 </div>
