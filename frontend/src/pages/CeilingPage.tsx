@@ -193,7 +193,7 @@ function App() {
                 <div className="space-y-3 text-sm">
                   <div className="flex justify-between items-center py-2 border-b border-gray-600">
                     <span className="text-gray-400">Материал:</span>
-                    <span className="text-white font-medium">Алюминиевый сплав 6060</span>
+                    <span className="text-white font-medium">Алюминиевый сплав АД31</span>
                   </div>
                   <div className="flex justify-between items-center py-2 border-b border-gray-600">
                     <span className="text-gray-400">Высота профиля:</span>
