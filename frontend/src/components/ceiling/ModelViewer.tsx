@@ -29,8 +29,16 @@ const ModelViewer: React.FC<ModelViewerProps> = ({
     lastX: 0,
     lastY: 0
   });
+  const touchState = useRef({
+    isTouching: false,
+    lastX: 0,
+    lastY: 0,
+    initialDistance: 0,
+    isPinching: false
+  });
   const rotationState = useRef({ x: 0, y: 0 });
   const autoRotateTimeout = useRef<NodeJS.Timeout | null>(null);
+  const [isMobile, setIsMobile] = useState(false);
 
   // Native wheel event handler for better control
   const handleNativeWheel = (e: WheelEvent) => {
@@ -45,6 +53,14 @@ const ModelViewer: React.FC<ModelViewerProps> = ({
       Math.min(8, cameraRef.current.position.z + delta)
     );
   };
+
+  useEffect(() => {
+    // Detect mobile device
+    const checkMobile = () => {
+      setIsMobile(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+    };
+    checkMobile();
+  }, []);
 
   useEffect(() => {
     if (!containerRef.current) return;
@@ -262,17 +278,111 @@ const ModelViewer: React.FC<ModelViewerProps> = ({
     const handleMouseUp = (e: MouseEvent) => {
       mouseState.current.isDown = false;
       isDraggingRef.current = false;
-      
+
       // Возобновляем автовращение через 4 секунды
       autoRotateTimeout.current = setTimeout(() => {
         isAutoRotatingRef.current = true;
       }, 4000);
-      
+
       e.preventDefault();
     };
 
+    // Touch event handlers
+    const getTouchDistance = (touch1: Touch, touch2: Touch): number => {
+      const dx = touch1.clientX - touch2.clientX;
+      const dy = touch1.clientY - touch2.clientY;
+      return Math.sqrt(dx * dx + dy * dy);
+    };
+
+    const handleTouchStart = (e: TouchEvent) => {
+      e.preventDefault();
+      e.stopPropagation();
+
+      if (e.touches.length === 1) {
+        // Single touch - rotation
+        touchState.current.isTouching = true;
+        touchState.current.isPinching = false;
+        touchState.current.lastX = e.touches[0].clientX;
+        touchState.current.lastY = e.touches[0].clientY;
+
+        isDraggingRef.current = true;
+        isAutoRotatingRef.current = false;
+
+        // Очищаем таймер автовращения
+        if (autoRotateTimeout.current) {
+          clearTimeout(autoRotateTimeout.current);
+          autoRotateTimeout.current = null;
+        }
+      } else if (e.touches.length === 2) {
+        // Two fingers - pinch to zoom
+        touchState.current.isPinching = true;
+        touchState.current.initialDistance = getTouchDistance(e.touches[0], e.touches[1]);
+      }
+    };
+
+    const handleTouchMove = (e: TouchEvent) => {
+      e.preventDefault();
+      e.stopPropagation();
+
+      if (!modelRef.current) return;
+
+      if (e.touches.length === 1 && touchState.current.isTouching && !touchState.current.isPinching) {
+        // Single touch - rotation
+        const deltaX = e.touches[0].clientX - touchState.current.lastX;
+        const deltaY = e.touches[0].clientY - touchState.current.lastY;
+
+        // Update rotation state
+        rotationState.current.y += deltaX * 0.005;
+        rotationState.current.x -= deltaY * 0.005;
+
+        // Limit vertical rotation
+        rotationState.current.x = Math.max(
+          -Math.PI / 3,
+          Math.min(Math.PI / 3, rotationState.current.x)
+        );
+
+        touchState.current.lastX = e.touches[0].clientX;
+        touchState.current.lastY = e.touches[0].clientY;
+      } else if (e.touches.length === 2 && touchState.current.isPinching) {
+        // Two fingers - pinch to zoom
+        const currentDistance = getTouchDistance(e.touches[0], e.touches[1]);
+        const delta = (touchState.current.initialDistance - currentDistance) * 0.01;
+
+        if (cameraRef.current) {
+          cameraRef.current.position.z = Math.max(
+            1,
+            Math.min(8, cameraRef.current.position.z + delta)
+          );
+        }
+
+        touchState.current.initialDistance = currentDistance;
+      }
+    };
+
+    const handleTouchEnd = (e: TouchEvent) => {
+      e.preventDefault();
+      e.stopPropagation();
+
+      if (e.touches.length === 0) {
+        touchState.current.isTouching = false;
+        touchState.current.isPinching = false;
+        isDraggingRef.current = false;
+
+        // Возобновляем автовращение через 4 секунды
+        autoRotateTimeout.current = setTimeout(() => {
+          isAutoRotatingRef.current = true;
+        }, 4000);
+      } else if (e.touches.length === 1) {
+        // Transition from pinch to single touch
+        touchState.current.isPinching = false;
+        touchState.current.isTouching = true;
+        touchState.current.lastX = e.touches[0].clientX;
+        touchState.current.lastY = e.touches[0].clientY;
+      }
+    };
+
     window.addEventListener('resize', handleResize);
-    
+
     // Add mouse event listeners to the container
     const container = containerRef.current;
     if (container) {
@@ -281,6 +391,12 @@ const ModelViewer: React.FC<ModelViewerProps> = ({
       container.addEventListener('mouseup', handleMouseUp);
       container.addEventListener('mouseleave', handleMouseUp);
       container.addEventListener('wheel', handleNativeWheel, { passive: false });
+
+      // Add touch event listeners
+      container.addEventListener('touchstart', handleTouchStart, { passive: false });
+      container.addEventListener('touchmove', handleTouchMove, { passive: false });
+      container.addEventListener('touchend', handleTouchEnd, { passive: false });
+      container.addEventListener('touchcancel', handleTouchEnd, { passive: false });
     }
 
     // Cleanup
@@ -298,6 +414,12 @@ const ModelViewer: React.FC<ModelViewerProps> = ({
         container.removeEventListener('mouseup', handleMouseUp);
         container.removeEventListener('mouseleave', handleMouseUp);
         container.removeEventListener('wheel', handleNativeWheel);
+
+        // Remove touch event listeners
+        container.removeEventListener('touchstart', handleTouchStart);
+        container.removeEventListener('touchmove', handleTouchMove);
+        container.removeEventListener('touchend', handleTouchEnd);
+        container.removeEventListener('touchcancel', handleTouchEnd);
       }
       if (containerRef.current && renderer.domElement) {
         containerRef.current.removeChild(renderer.domElement);
@@ -332,10 +454,13 @@ const ModelViewer: React.FC<ModelViewerProps> = ({
   };
 
   return (
-    <div 
+    <div
       ref={containerRef}
       className="relative bg-[#3A3A3A] rounded-lg overflow-hidden h-96 md:h-[500px] cursor-grab active:cursor-grabbing border border-gray-700"
-      style={{ cursor: isDraggingRef.current ? 'grabbing' : 'grab' }}
+      style={{
+        cursor: isDraggingRef.current ? 'grabbing' : 'grab',
+        touchAction: 'none'
+      }}
     >
       {/* Loading State */}
       {isLoading && (
@@ -388,7 +513,9 @@ const ModelViewer: React.FC<ModelViewerProps> = ({
           <div className="bg-[#3A3A3A]/80 backdrop-blur-sm rounded-lg p-3">
             <p className="text-gray-300 text-sm">
               <Move className="inline w-4 h-4 mr-1" />
-              {description}
+              {isMobile
+                ? "Используйте касания для вращения. Два пальца для масштабирования"
+                : description}
             </p>
             <p className="text-xs text-gray-400 mt-1">
               3D модель товара
