@@ -1,8 +1,8 @@
 export const productToCategory: Record<string, string> = {
   // Standard profiles
-  'std-1': 'standard',
-  'std-2': 'standard',
-  'std-3': 'standard',
+  'bp': 'standard',
+  'sten': 'standard',
+  'razdel': 'standard',
   'std-4': 'standard',
   'std-5': 'standard',
   'std-6': 'standard',
