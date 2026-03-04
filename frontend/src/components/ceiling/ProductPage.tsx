@@ -90,7 +90,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderCli
           'Рабочая температура': '-40°C до +80°C'
         }
       },
-      'std-2': {
+      'sten': {
         name: 'Профиль Стенвой',
         images: [
           stenvoy,
