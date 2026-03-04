@@ -3,9 +3,9 @@ export const productToCategory: Record<string, string> = {
   'bp': 'standard',
   'sten': 'standard',
   'razdel': 'standard',
-  'std-4': 'standard',
-  'std-5': 'standard',
-  'std-6': 'standard',
+  'univ': 'standard',
+  'potoloch': 'standard',
+  'z': 'standard',
 
   // Cornices
   'b2': 'cornices',
