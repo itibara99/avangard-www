@@ -89,7 +89,7 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
           inStock: true
         },
         {
-          id: 'std-4',
+          id: 'univ',
           name: 'Профиль Универсальный',
           model3d: '/univers.glb',
           images: [
@@ -101,7 +101,7 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
           inStock: false
         },
         {
-          id: 'std-5',
+          id: 'potoloch',
           name: 'Профиль Потолочный',
           model3d: '/potoloch.glb',
           images: [
@@ -113,7 +113,7 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
           inStock: true
         },
         {
-          id: 'std-6',
+          id: 'z',
           name: 'Отбойник Z',
           model3d: '/z.glb',
           images: [
@@ -139,7 +139,7 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
           inStock: true
         },
         {
-          id: 'cor-5',
+          id: 'b1',
           name: 'Карниз B-1 однорядный',
           images: [
             am1,
@@ -176,7 +176,7 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
           inStock: true
         }, */
         {
-          id: 'cor-3',
+          id: 'pk15',
           name: 'Карниз ПК-15',
           images: [
             pk15,
@@ -187,7 +187,7 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
           inStock: true
         },
         {
-          id: 'cor-4',
+          id: 'pk12',
           name: 'Карниз ПК-12',
           images: [
             pk12,
