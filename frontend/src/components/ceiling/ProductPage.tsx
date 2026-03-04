@@ -67,7 +67,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderCli
     };
 
     const products: { [key: string]: Partial<Product> } = {
-      'std-1': {
+      'bp': {
         name: 'Брус 40х40',
         images: [
           bp40,
