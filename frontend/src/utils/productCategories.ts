@@ -10,9 +10,9 @@ export const productToCategory: Record<string, string> = {
   // Cornices
   'b2': 'cornices',
   'cor-1': 'cornices',
-  'cor-2': 'cornices',
-  'cor-3': 'cornices',
-  'cor-4': 'cornices',
+  'pk15': 'cornices',
+  'pk12': 'cornices',
+  'b1': 'cornices',
 
   // Contour/Components
   'cont-1': 'contour',
