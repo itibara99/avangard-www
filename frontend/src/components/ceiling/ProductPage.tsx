@@ -133,7 +133,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderCli
           'Рабочая температура': '-40°C до +80°C'
         }
       },
-      'std-3': {
+      'razdel': {
         name: 'Разделитель',
         images: [
           razdelitel,
@@ -155,7 +155,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderCli
           'Рабочая температура': '-40°C до +80°C'
         }
       },
-      'std-4': {
+      'univ': {
         name: 'Профиль Универсальный',
         images: [
           universal,
@@ -174,7 +174,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderCli
           'Рабочая температура': '-40°C до +80°C'
         }
       },
-      'std-5': {
+      'potoloch': {
         name: 'Профиль Потолочный',
         images: [
           potoloch,
@@ -196,7 +196,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderCli
           'Рабочая температура': '-40°C до +80°C'
         }
       },
-      'std-6': {
+      'z': {
         name: 'Отбойник Z',
         images: [
           z,
@@ -261,7 +261,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderCli
           'Рабочая температура': '-40°C до +80°C'
         }
       },
-      'cor-3': {
+      'pk15': {
         name: 'Карниз ПК-15',
         images: [
           pk15,
@@ -283,7 +283,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderCli
           'Рабочая температура': '-40°C до +80°C'
         }
       },
-      'cor-4': {
+      'pk12': {
         name: 'Карниз ПК-12',
         images: [
           pk12,
@@ -306,7 +306,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderCli
           'Рабочая температура': '-40°C до +80°C'
         }
       },
-      'cor-5': {
+      'b1': {
         name: 'Карниз B-1 однорядный',
         images: [
           am1,
