@@ -77,7 +77,7 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
           inStock: true
         },
         {
-          id: 'std-3',
+          id: 'razdel',
           name: 'Разделитель',
           model3d: '/razdel.glb',
           images: [
