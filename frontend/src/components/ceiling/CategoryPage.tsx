@@ -52,7 +52,7 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
     const baseProducts = {
       standard: [
         {
-          id: 'std-1',
+          id: 'bp',
           name: 'Брус 40х40',
           model3d: '/bp40.glb',
           images: [
@@ -65,7 +65,7 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
           inStock: true
         },
         {
-          id: 'std-2',
+          id: 'sten',
           name: 'Профиль Стенвой',
           model3d: '/sten.glb',
           images: [
