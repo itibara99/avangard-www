@@ -7,12 +7,14 @@ interface ModelViewerProps {
   modelPath: string;
   title?: string;
   description?: string;
+  containerHeight?: string;
 }
 
-const ModelViewer: React.FC<ModelViewerProps> = ({ 
-  modelPath, 
-  title = "3D Модель", 
-  description = "Используйте мышь для вращения и масштабирования модели" 
+const ModelViewer: React.FC<ModelViewerProps> = ({
+  modelPath,
+  title = "3D Модель",
+  description = "Используйте мышь для вращения и масштабирования модели",
+  containerHeight = "h-96"
 }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -456,7 +458,7 @@ const ModelViewer: React.FC<ModelViewerProps> = ({
   return (
     <div
       ref={containerRef}
-      className="relative bg-[#3A3A3A] rounded-lg overflow-hidden h-96 cursor-grab active:cursor-grabbing border border-gray-700"
+      className={`relative bg-[#3A3A3A] rounded-lg overflow-hidden ${containerHeight} cursor-grab active:cursor-grabbing border border-gray-700`}
       style={{
         cursor: isDraggingRef.current ? 'grabbing' : 'grab',
         touchAction: 'none'

@@ -176,10 +176,11 @@ function App() {
 
               {/* Right Side - 3D Model (2/3 width) */}
               <div className="lg:col-span-2">
-                <ModelViewer 
+                <ModelViewer
                   modelPath='/3d/b2.glb'
                   title="Карниз B2"
                   description="Используйте левую кнопку мыши для вращения • Колесико мыши для масштабирования • Автовращение возобновляется через 4 секунды"
+                  containerHeight="h-96 md:h-[500px]"
                 />
               </div>
             </div>
