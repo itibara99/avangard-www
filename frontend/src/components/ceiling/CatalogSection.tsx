@@ -1,5 +1,5 @@
 import React from 'react';
-import { Home, Frame, Layers, ArrowRight } from 'lucide-react';
+import { Hop as Home, Frame, Layers, ArrowRight } from 'lucide-react';
 import { bp40, cornices, furnitures } from '@/assets/images';
 
 interface CatalogSectionProps {

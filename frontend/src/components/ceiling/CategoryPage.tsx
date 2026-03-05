@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowLeft, Grid, List } from 'lucide-react';
+import { ArrowLeft, Grid2x2 as Grid, List } from 'lucide-react';
 import ProductCard from './ProductCard';
 
 import {bp40, bp40_ch, stenvoy, sten_1, sten_2, sten_3, razdelitel,
