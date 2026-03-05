@@ -130,7 +130,7 @@ function App() {
       <Header />
       <HeroSection />
       <section id="model-viewer" className="py-20 bg-[#1A1A1A]">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               НОВИНКА - Карниз B-2 PRO

@@ -419,7 +419,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderCli
 
   return (
     <div className="min-h-screen bg-[#1A1A1A] pt-16">
-      <div className="container mx-auto px-6 md:px-8 lg:px-12 py-8">
+      <div className="container mx-auto px-4 lg:px-8 py-8">
         {/* Back Button */}
         <button
           onClick={onBack}

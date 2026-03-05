@@ -52,7 +52,7 @@ const CatalogSection: React.FC<CatalogSectionProps> = ({ onCategoryClick }) => {
 
   return (
     <section id="catalog" className="py-20 bg-[#1A1A1A]">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Каталог продукции

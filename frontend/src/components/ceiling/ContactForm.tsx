@@ -63,7 +63,7 @@ const ContactForm: React.FC = () => {
 
   return (
     <section id="contact-form" className="py-20 bg-[#3A3A3A]">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 lg:px-8">
         <div className="max-w-md mx-auto">
           <div className="bg-[#1A1A1A] rounded-lg p-8 shadow-2xl">
             <div className="text-center mb-8">

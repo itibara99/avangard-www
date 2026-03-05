@@ -352,7 +352,7 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
 
   return (
     <div className="min-h-screen bg-[#1A1A1A] pt-16">
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto px-4 lg:px-8 py-8">
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Sidebar Menu */}
           <div className="lg:w-64 flex-shrink-0">

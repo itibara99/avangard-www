@@ -83,7 +83,7 @@ const HeroSection: React.FC = () => {
       </div>
 
       <div className="absolute inset-0 flex items-center z-10">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-4xl">
             {/* Slide Content */}
             <div className="transition-all duration-500 ease-in-out">
