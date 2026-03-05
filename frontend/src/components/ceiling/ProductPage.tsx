@@ -146,8 +146,6 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderCli
         priceBanner: 'На средний и крупный опт цена договорная',
         specifications: {
           'Материал': 'Алюминиевый сплав АД31',
-          'Высота профиля': '30 мм',
-          'Ширина': '20 мм',
           'Толщина стенки': '1.2 мм',
           'Длина': '2.5 м / 3.2 м',
           'Цвет': '',
@@ -187,9 +185,6 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderCli
         priceBanner: 'На средний и крупный опт цена договорная',
         specifications: {
           'Материал': 'Алюминиевый сплав АД31',
-          'Высота профиля': '42 мм',
-          'Ширина': '26 мм',
-          'Толщина стенки': '1.3 мм',
           'Длина': '2 м / 2.5 м',
           'Цвет': 'Алюминий без покрытия',
           'Вес': '221 гр/м',
@@ -209,7 +204,6 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderCli
         priceBanner: 'На средний и крупный опт цена договорная',
         specifications: {
           'Материал': 'Алюминиевый сплав АД31',
-          'Толщина стенки': '0.8 мм',
           'Длина': '2 м / 2.5 м',
           'Цвет': 'Белый матовый',
           'Вес': '136 гр/м',
