@@ -456,7 +456,7 @@ const ModelViewer: React.FC<ModelViewerProps> = ({
   return (
     <div
       ref={containerRef}
-      className="relative bg-[#3A3A3A] rounded-lg overflow-hidden h-96 md:h-[500px] cursor-grab active:cursor-grabbing border border-gray-700"
+      className="relative bg-[#3A3A3A] rounded-lg overflow-hidden h-96 cursor-grab active:cursor-grabbing border border-gray-700"
       style={{
         cursor: isDraggingRef.current ? 'grabbing' : 'grab',
         touchAction: 'none'
