@@ -48,11 +48,11 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, productName }) =>
         <h3 className="text-xl font-semibold text-white mb-4">Галерея изображений</h3>
 
         <div className="relative">
-          <div className="bg-[#2A2A2A] rounded-lg overflow-hidden h-64 flex items-center justify-center group">
+          <div className="bg-[#2A2A2A] rounded-lg overflow-hidden h-64 group">
             <img
               src={validImages[currentIndex]}
               alt={`${productName} - изображение ${currentIndex + 1}`}
-              className="max-h-full max-w-full object-contain cursor-pointer transition-transform duration-300 group-hover:scale-105"
+              className="w-full h-full object-cover object-center cursor-pointer transition-transform duration-300 group-hover:scale-105"
               onClick={() => openLightbox(currentIndex)}
             />
 

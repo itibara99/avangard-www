@@ -441,14 +441,12 @@ const ProductPage: React.FC<ProductPageProps> = ({ productId, onBack, onOrderCli
         {/* Top Section: Image + 3D Model */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
           {/* Product Image */}
-          <div className="bg-[#3A3A3A] rounded-lg overflow-hidden">
-            <div className="h-96 flex items-center justify-center">
-              <img
-                src={product.images[0]}
-                alt={product.name}
-                className="max-h-full max-w-full object-contain object-center"
-              />
-            </div>
+          <div className="bg-[#3A3A3A] rounded-lg overflow-hidden h-96">
+            <img
+              src={product.images[0]}
+              alt={product.name}
+              className="w-full h-full object-cover object-center"
+            />
           </div>
 
           {/* 3D Model Viewer */}
