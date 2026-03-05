@@ -48,7 +48,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, productName }) =>
         <h3 className="text-xl font-semibold text-white mb-4">Галерея изображений</h3>
 
         <div className="relative">
-          <div className="bg-[#2A2A2A] rounded-lg overflow-hidden h-64 group">
+          <div className="bg-[#2A2A2A] rounded-lg overflow-hidden h-[512px] group">
             <img
               src={validImages[currentIndex]}
               alt={`${productName} - изображение ${currentIndex + 1}`}
