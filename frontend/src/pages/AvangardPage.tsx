@@ -24,6 +24,7 @@ import {
   CheckCircle,
 } from 'lucide-react';
 import AboutSection from '../components/avangard/AboutSection.tsx';
+import ProductionCycleSection from '../components/ceiling/ProductionCycleSection.tsx';
 import CookieConsent from '../components/CookieConsent';
 import potolkiBg from '../assets/ceiling.jpg';
 import potolkiProfile from '../assets/ceiling.jpg';
@@ -1001,6 +1002,9 @@ function AvangardPage() {
 
       {/* About Us Section */}
       <AboutSection />
+
+      {/* Production Cycle Section */}
+      <ProductionCycleSection />
 
       {/* News Section */}
       {/*<NewsSection />*/}
