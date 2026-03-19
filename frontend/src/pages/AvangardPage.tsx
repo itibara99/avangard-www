@@ -1,29 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { 
-  Menu, 
-  X, 
-  Phone, 
-  Mail, 
-  MapPin, 
-  ChevronRight,
-  Building2,
-  Recycle,
-  Users,
-  Award,
-  Wrench,
-  Palette,
-  Sparkles,
-  Layers,
-  Shield,
-  ArrowRight,
-  Star,
-  Zap,
-  Target,
-  TrendingUp,
-  CheckCircle,
-} from 'lucide-react';
+import { Menu, X, Phone, Mail, MapPin, ChevronRight, Building2, Recycle, Users, Award, Wrench, Palette, Sparkles, Layers, Shield, ArrowRight, Star, Zap, Target, TrendingUp, CircleCheck as CheckCircle } from 'lucide-react';
 import AboutSection from '../components/avangard/AboutSection.tsx';
+import ProductionCycleSection from '../components/avangard/ProductionCycleSection.tsx';
 import CookieConsent from '../components/CookieConsent';
 import potolkiBg from '../assets/ceiling.jpg';
 import potolkiProfile from '../assets/ceiling.jpg';
@@ -1001,6 +980,9 @@ function AvangardPage() {
 
       {/* About Us Section */}
       <AboutSection />
+
+      {/* Production Cycle Section */}
+      <ProductionCycleSection />
 
       {/* News Section */}
       {/*<NewsSection />*/}
