@@ -1,5 +1,5 @@
 import React from 'react';
-import { Recycle, Factory, Flame, Palette, Package, ArrowRight, CircleCheck as CheckCircle } from 'lucide-react';
+import { Recycle, Factory, Flame, Palette, Package, ArrowRight, CheckCircle2 as CheckCircle } from 'lucide-react';
 
 const ProductionCycleSection = () => {
   const productionStages = [
